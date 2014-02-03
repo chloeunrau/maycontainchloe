@@ -34,6 +34,9 @@ Template Name: Home
   </div>
 
   <div id="activities">
+    <div class="title">
+      <h1>Recent Activities</h1>
+    </div>
     <?php dynamic_sidebar( 'Activities' ); ?>
   </div>
 

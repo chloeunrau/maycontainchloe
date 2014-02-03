@@ -1,6 +1,12 @@
 /* SASS */
 
 
+/* IMPORT */
+
+@import url(http://fonts.googleapis.com/css?family=Abel);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
+
+
 /* VARIABLES */
 
 $chloeLight: #e5e5e5;
@@ -9,6 +15,7 @@ $chloeGrey: #353b38;
 $chloeGold: #e7b223;
 $chloeCopper: #a07a13;
 $chloeGreen: #30b069;
+$chloeGreenLight: #4edf8e;
 
 $headerHeight: 72px;
 $menuHeight: 49px;
@@ -22,15 +29,6 @@ $socialHeight: 200px;
 
 
 /* MIXINS */
-
-@mixin wordpressPostStyles {
-  img.alignright {float:right; margin:0 0 1em 1em}
-  img.alignleft {float:left; margin:0 1em 1em 0}
-  img.aligncenter {display: block; margin-left: auto; margin-right: auto}
-  a img.alignright {float:right; margin:0 0 1em 1em}
-  a img.alignleft {float:left; margin:0 1em 1em 0}
-  a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
-}
 
 @mixin zeroPMB {
   padding: 0;
@@ -68,20 +66,71 @@ $socialHeight: 200px;
   width: 9999px;
 }
 
+@mixin fontCopy {
+  font-family: 'Open Sans', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased !important;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
+@mixin fontTitle {
+  font-family: Abel, sans-serif;
+  -webkit-font-smoothing: antialiased !important;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
 
 
 
 
 /* STYLES */
 
-@include wordpressPostStyles;
+img.alignright {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+img.alignleft {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+a img.alignright {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+a img.alignleft {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-* {
-  @include zeroPMB;
+a, a:link {
+  color: $chloeGreen;
+}
+a:hover, a:active {
+  color: $chloeGreenLight;
+}
+
+h1 {
+  @include fontTitle;
+  font-size: 22px;
+  color: $chloeCopper;
+  padding-bottom: 10px;
 }
 
 p {
   padding-bottom: 15px;
+}
+
+* {
+  @include zeroPMB;
 }
 
 html, body {
@@ -90,6 +139,9 @@ html, body {
 }
 
 body {
+  @include fontCopy;
+  font-size: 14px;
+  color: $chloeGrey;
   background-color: $chloeLight;
   margin: 0;
   padding: 0;
@@ -167,7 +219,15 @@ nav {
     min-height: 170px;
     color: $chloeLight;
     background-color: $chloeDark;
-    padding: 30px 10px 30px 10px;
+    padding: 40px 10px 30px 10px;
+
+    h1 {
+      color: $chloeGold;
+    }
+
+    img {
+      margin-top: 6px;
+    }
   }
   #about:before, #about:after {
     @include fullWidth;
@@ -236,6 +296,14 @@ nav {
   }
   #social-container:after {
     left: 100%;
+  }
+
+  #activities {
+    padding: 30px 10px 40px 10px;
+
+    .title {
+      text-align: center;
+    }
   }
 }
 

@@ -1,5 +1,8 @@
 /* SASS */
+/* IMPORT */
+@import url(http://fonts.googleapis.com/css?family=Abel);
 /* VARIABLES */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
 /* MIXINS */
 img.alignright {
   float: right;
@@ -27,18 +30,38 @@ a img.aligncenter {
   margin-left: auto;
   margin-right: auto; }
 
+a, a:link {
+  color: #30b069; }
+
+a:hover, a:active {
+  color: #4edf8e; }
+
+h1 {
+  font-family: Abel, sans-serif;
+  -webkit-font-smoothing: antialiased !important;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  /* STYLES */
+  font-size: 22px;
+  color: #a07a13;
+  padding-bottom: 10px; }
+
+p {
+  padding-bottom: 15px; }
+
 * {
   padding: 0;
   margin: 0;
   border: 0; }
 
-p {
-  padding-bottom: 15px; }
-
 html, body {
   height: 100%; }
 
 body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased !important;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  font-size: 14px;
+  color: #353b38;
   background-color: #e5e5e5;
   margin: 0;
   padding: 0; }
@@ -108,14 +131,17 @@ nav {
     min-height: 170px;
     color: #e5e5e5;
     background-color: #282b2a;
-    padding: 30px 10px 30px 10px; }
+    padding: 40px 10px 30px 10px; }
+    #content #about h1 {
+      color: #e7b223; }
+    #content #about img {
+      margin-top: 6px; }
   #content #about:before, #content #about:after {
     content: "";
     position: absolute;
     top: 0;
     bottom: 0;
     width: 9999px;
-    /* STYLES */
     background-color: #282b2a; }
   #content #about:before {
     right: 100%; }
@@ -177,7 +203,6 @@ nav {
     top: 0;
     bottom: 0;
     width: 9999px;
-    /* STYLES */
     background: #30b069;
     background-image: url('../../images/social-tile.jpg');
     background-repeat: repeat-x; }
@@ -185,6 +210,10 @@ nav {
     right: 100%; }
   #content #social-container:after {
     left: 100%; }
+  #content #activities {
+    padding: 30px 10px 40px 10px; }
+    #content #activities .title {
+      text-align: center; }
 
 footer, #push {
   height: 49px; }
