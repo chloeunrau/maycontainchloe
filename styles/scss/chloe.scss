@@ -10,20 +10,27 @@ $chloeGold: #e7b223;
 $chloeCopper: #a07a13;
 $chloeGreen: #30b069;
 
+$headerHeight: 72px;
+$menuHeight: 49px;
+$footerHeight: 45px;
+$mobileWidth: 640px;
+
 
 
 
 
 /* MIXINS */
 
-@mixin zeroPaddingMargin {
-  padding: 0;
-  margin: 0;
-}
-
 @mixin centre {
   margin-left: auto;
   margin-right: auto;
+}
+
+@mixin menuButton {
+  background-repeat: no-repeat;
+  float: left;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 
@@ -32,8 +39,22 @@ $chloeGreen: #30b069;
 
 /* STYLES */
 
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+img.alignright {float:right; margin:0 0 1em 1em}
+img.alignleft {float:left; margin:0 1em 1em 0}
+img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+a img.alignright {float:right; margin:0 0 1em 1em}
+a img.alignleft {float:left; margin:0 1em 1em 0}
+a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+
 html, body {
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -42,9 +63,15 @@ body {
   padding: 0;
 }
 
+#wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -$footerHeight;
+}
+
 header {
-  @include zeroPaddingMargin;
-  height: 72px;
+  height: $headerHeight;
   background-color: $chloeGold;
   background-image: url('../../images/header-tile.jpg');
   text-align: center;
@@ -57,28 +84,19 @@ header {
 }
 
 nav {
-  @include zeroPaddingMargin;
-  height: 49px;
+  height: $menuHeight;
   background-color: $chloeGreen;
   background-image: url('../../images/menu-tile.jpg');
   text-align: center;
   overflow: hidden;
 
   #menu {
-    @include zeroPaddingMargin;
     display: inline-block;
-
-    @mixin menuButton {
-      background-repeat: no-repeat;
-      float: left;
-      padding-left: 5px;
-      padding-right: 5px;
-    }
 
     #menu-home {
       @include menuButton;
       width: 74px;
-      height: 49px;
+      height: $menuHeight;
       background-image: url('../../images/menu-home-n.jpg');
     }
     #menu-home:hover {
@@ -88,7 +106,7 @@ nav {
     #menu-blog {
       @include menuButton;
       width: 65px;
-      height: 49px;
+      height: $menuHeight;
       background-image: url('../../images/menu-blog-n.jpg');
     }
     #menu-blog:hover {
@@ -98,7 +116,7 @@ nav {
     #menu-portfolio {
       @include menuButton;
       width: 105px;
-      height: 49px;
+      height: $menuHeight;
       background-image: url('../../images/menu-portfolio-n.jpg');
     }
     #menu-portfolio:hover {
@@ -107,20 +125,35 @@ nav {
   }
 }
 
-#wrapper {
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  margin: 0 auto -45px;
-}
-
 #content {
   @include centre;
-  width: 640px;
+  width: $mobileWidth;
+
+  #about {
+    position: relative;
+    min-height: 170px;
+    color: $chloeLight;
+    background-color: $chloeDark;
+    padding: 30px 10px 30px 10px;
+  }
+  #about:before, #about:after {
+    content: "";
+    position: absolute;
+    background: $chloeDark;
+    top: 0;
+    bottom: 0;
+    width: 9999px;   /* some huge width */
+  }
+  #about:before {
+    right: 100%;
+  }
+  #about:after {
+    left: 100%;
+  }
 }
 
 footer, #push {
-  height: 45px;
+  height: $footerHeight;
 }
 
 footer {
