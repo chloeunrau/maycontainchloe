@@ -12,8 +12,10 @@ $chloeGreen: #30b069;
 
 $headerHeight: 72px;
 $menuHeight: 49px;
-$footerHeight: 45px;
+$footerHeight: 49px;
 $mobileWidth: 640px;
+$socialWidth: 131px;
+$socialHeight: 200px;
 
 
 
@@ -29,8 +31,26 @@ $mobileWidth: 640px;
 @mixin menuButton {
   background-repeat: no-repeat;
   float: left;
+  padding-left: auto;
+  padding-right: auto;
+}
+
+@mixin socialButton {
+  width: $socialWidth;
+  height: $socialHeight;
+  float: left;
+  background-repeat: no-repeat;
   padding-left: 5px;
   padding-right: 5px;
+}
+
+@mixin fullWidth {
+  // Enable background to extend to full-width
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 9999px;
 }
 
 
@@ -52,9 +72,13 @@ a img.alignright {float:right; margin:0 0 1em 1em}
 a img.alignleft {float:left; margin:0 1em 1em 0}
 a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
 
+p {
+  padding-bottom: 15px;
+}
+
 html, body {
   height: 100%;
-  overflow-x: hidden;
+  //overflow-x: hidden;
 }
 
 body {
@@ -68,6 +92,7 @@ body {
   height: auto !important;
   height: 100%;
   margin: 0 auto -$footerHeight;
+  overflow-x: hidden;
 }
 
 header {
@@ -137,17 +162,69 @@ nav {
     padding: 30px 10px 30px 10px;
   }
   #about:before, #about:after {
-    content: "";
-    position: absolute;
-    background: $chloeDark;
-    top: 0;
-    bottom: 0;
-    width: 9999px;   /* some huge width */
+    @include fullWidth;
+    background-color: $chloeDark;
   }
   #about:before {
     right: 100%;
   }
   #about:after {
+    left: 100%;
+  }
+
+  #social-container {
+    position: relative;
+    height: 200px;
+    background-image: url('../../images/social-tile.jpg');
+    background-repeat: repeat-x;
+    text-align: center;
+
+    #social {
+      display: inline-block;
+
+      #social-github {
+        @include socialButton;
+        background-image: url('../../images/social-github-n.jpg');
+      }
+      #social-github:hover {
+        background-image: url('../../images/social-github-s.jpg');
+      }
+
+      #social-twitter {
+        @include socialButton;
+        background-image: url('../../images/social-twitter-n.jpg');
+      }
+      #social-twitter:hover {
+        background-image: url('../../images/social-twitter-s.jpg');
+      }
+
+      #social-linkedin {
+        @include socialButton;
+        background-image: url('../../images/social-linkedin-n.jpg');
+      }
+      #social-linkedin:hover {
+        background-image: url('../../images/social-linkedin-s.jpg');
+      }
+
+      #social-resume {
+        @include socialButton;
+        background-image: url('../../images/social-resume-n.jpg');
+      }
+      #social-resume:hover {
+        background-image: url('../../images/social-resume-s.jpg');
+      }
+    }
+  }
+  #social-container:before, #social-container:after {
+    @include fullWidth;
+    background: $chloeGreen;
+    background-image: url('../../images/social-tile.jpg');
+    background-repeat: repeat-x;
+  }
+  #social-container:before {
+    right: 100%;
+  }
+  #social-container:after {
     left: 100%;
   }
 }
@@ -159,5 +236,6 @@ footer, #push {
 footer {
   background-color: $chloeGold;
   background-image: url('../../images/footer-tile.jpg');
+  background-repeat: repeat-x;
   text-align: center;
 }

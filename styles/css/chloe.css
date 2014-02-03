@@ -32,9 +32,11 @@ a img.aligncenter {
   margin-left: auto;
   margin-right: auto; }
 
+p {
+  padding-bottom: 15px; }
+
 html, body {
-  height: 100%;
-  overflow-x: hidden; }
+  height: 100%; }
 
 body {
   background-color: #e5e5e5;
@@ -45,7 +47,8 @@ body {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -45px; }
+  margin: 0 auto -49px;
+  overflow-x: hidden; }
 
 header {
   height: 72px;
@@ -68,9 +71,8 @@ nav {
     nav #menu #menu-home {
       background-repeat: no-repeat;
       float: left;
-      padding-left: 5px;
-      padding-right: 5px;
-      /* STYLES */
+      padding-left: auto;
+      padding-right: auto;
       width: 74px;
       height: 49px;
       background-image: url('../../images/menu-home-n.jpg'); }
@@ -79,9 +81,8 @@ nav {
     nav #menu #menu-blog {
       background-repeat: no-repeat;
       float: left;
-      padding-left: 5px;
-      padding-right: 5px;
-      /* STYLES */
+      padding-left: auto;
+      padding-right: auto;
       width: 65px;
       height: 49px;
       background-image: url('../../images/menu-blog-n.jpg'); }
@@ -90,9 +91,8 @@ nav {
     nav #menu #menu-portfolio {
       background-repeat: no-repeat;
       float: left;
-      padding-left: 5px;
-      padding-right: 5px;
-      /* STYLES */
+      padding-left: auto;
+      padding-right: auto;
       width: 105px;
       height: 49px;
       background-image: url('../../images/menu-portfolio-n.jpg'); }
@@ -112,20 +112,83 @@ nav {
   #content #about:before, #content #about:after {
     content: "";
     position: absolute;
-    background: #282b2a;
     top: 0;
     bottom: 0;
-    /* some huge width */
-    width: 9999px; }
+    width: 9999px;
+    /* STYLES */
+    background-color: #282b2a; }
   #content #about:before {
     right: 100%; }
   #content #about:after {
     left: 100%; }
+  #content #social-container {
+    position: relative;
+    height: 200px;
+    background-image: url('../../images/social-tile.jpg');
+    background-repeat: repeat-x;
+    text-align: center; }
+    #content #social-container #social {
+      display: inline-block; }
+      #content #social-container #social #social-github {
+        width: 131px;
+        height: 200px;
+        float: left;
+        background-repeat: no-repeat;
+        padding-left: 5px;
+        padding-right: 5px;
+        background-image: url('../../images/social-github-n.jpg'); }
+      #content #social-container #social #social-github:hover {
+        background-image: url('../../images/social-github-s.jpg'); }
+      #content #social-container #social #social-twitter {
+        width: 131px;
+        height: 200px;
+        float: left;
+        background-repeat: no-repeat;
+        padding-left: 5px;
+        padding-right: 5px;
+        background-image: url('../../images/social-twitter-n.jpg'); }
+      #content #social-container #social #social-twitter:hover {
+        background-image: url('../../images/social-twitter-s.jpg'); }
+      #content #social-container #social #social-linkedin {
+        width: 131px;
+        height: 200px;
+        float: left;
+        background-repeat: no-repeat;
+        padding-left: 5px;
+        padding-right: 5px;
+        background-image: url('../../images/social-linkedin-n.jpg'); }
+      #content #social-container #social #social-linkedin:hover {
+        background-image: url('../../images/social-linkedin-s.jpg'); }
+      #content #social-container #social #social-resume {
+        width: 131px;
+        height: 200px;
+        float: left;
+        background-repeat: no-repeat;
+        padding-left: 5px;
+        padding-right: 5px;
+        background-image: url('../../images/social-resume-n.jpg'); }
+      #content #social-container #social #social-resume:hover {
+        background-image: url('../../images/social-resume-s.jpg'); }
+  #content #social-container:before, #content #social-container:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 9999px;
+    /* STYLES */
+    background: #30b069;
+    background-image: url('../../images/social-tile.jpg');
+    background-repeat: repeat-x; }
+  #content #social-container:before {
+    right: 100%; }
+  #content #social-container:after {
+    left: 100%; }
 
 footer, #push {
-  height: 45px; }
+  height: 49px; }
 
 footer {
   background-color: #e7b223;
   background-image: url('../../images/footer-tile.jpg');
+  background-repeat: repeat-x;
   text-align: center; }

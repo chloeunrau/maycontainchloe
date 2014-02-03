@@ -18,7 +18,10 @@ Template Name: Home
 
   <div id="social-container">
     <div id="social">
-      <p></p>
+      <a href="#"><div id="social-github"></div></a>
+      <a href="#"><div id="social-twitter"></div></a>
+      <a href="#"><div id="social-linkedin"></div></a>
+      <a href="#"><div id="social-resume"></div></a>
     </div>
   </div>
 
