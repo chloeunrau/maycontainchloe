@@ -17,9 +17,14 @@ array(
 
 
 register_sidebar( array(
+    'id'          => 'activities',
+    'name'        => 'Activities',
+    'description' => 'The Widget area for Activities on the home page.'
+) );
+register_sidebar( array(
     'id'          => 'portfolio',
     'name'        => 'Portfolio',
-    'description' => 'This is the Widget area for the Portfolio page.'
+    'description' => 'The Widget area for the Portfolio page.'
 ) );
 
 

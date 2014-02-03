@@ -26,7 +26,7 @@ Template Name: Home
   </div>
 
   <div id="activities">
-    <p></p>
+    <?php dynamic_sidebar( 'Activities' ); ?>
   </div>
 
 </div>
