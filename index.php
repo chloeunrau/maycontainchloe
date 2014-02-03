@@ -7,7 +7,12 @@
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <?php the_content(); ?>
     <?php endwhile; else: ?>
-    <?php _e(($_GET['s']) . " does not exist."); ?>
+      <div class="error">
+        <h1>This page does not exist</h1>
+        <p>
+          The requested URL may have been entered incorrectly or removed.
+        </p>
+      </div>
   <?php endif; ?>
 </div>
 

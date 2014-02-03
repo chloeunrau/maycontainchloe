@@ -12,17 +12,25 @@ Template Name: Home
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
       <?php the_content(); ?>
       <?php endwhile; else: ?>
-      <?php _e(($_GET['s']) . " does not exist."); ?>
+      <div class="error">
+        <h1>This page does not exist</h1>
+        <p>
+          The requested URL may have been entered incorrectly or removed.
+        </p>
+      </div>
     <?php endif; ?>
   </div>
 
   <div id="social-container">
     <div id="social">
-      <a href="https://github.com/chloeunrau" target="_blank">
-        <div id="social-github"></div>
+      <a href="mailto:chloe.unrau@gmail.com">
+        <div id="social-email"></div>
       </a>
       <a href="https://twitter.com/chloeunrau" target="_blank">
         <div id="social-twitter"></div>
+      </a>
+      <a href="https://github.com/chloeunrau" target="_blank">
+        <div id="social-github"></div>
       </a>
       <a href="http://linkedin.com/in/chloeunrau" target="_blank">
         <div id="social-linkedin"></div>

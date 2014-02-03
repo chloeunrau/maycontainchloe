@@ -1,8 +1,10 @@
 /* SASS */
 /* IMPORT */
-@import url(http://fonts.googleapis.com/css?family=Abel);
+@import url(http://fonts.googleapis.com/css
+            ?family=Abel);
 /* VARIABLES */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
+@import url(http://fonts.googleapis.com/css
+            ?family=Open+Sans:400italic,700italic,400,700);
 /* MIXINS */
 img.alignright {
   float: right;
@@ -31,19 +33,34 @@ a img.aligncenter {
   margin-right: auto; }
 
 a, a:link {
-  color: #30b069; }
+  color: #30b069;
+  text-decoration: none; }
 
 a:hover, a:active {
-  color: #4edf8e; }
+  color: #4edf8e;
+  /* STYLES */ }
 
 h1 {
   font-family: Abel, sans-serif;
   -webkit-font-smoothing: antialiased !important;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
-  /* STYLES */
   font-size: 22px;
   color: #a07a13;
   padding-bottom: 10px; }
+  h1 a, h1 a:link {
+    color: #30b069;
+    text-decoration: none; }
+  h1 a:hover, h1 a:active {
+    color: #4edf8e;
+    /* STYLES */ }
+
+h2 {
+  font-family: Abel, sans-serif;
+  -webkit-font-smoothing: antialiased !important;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  font-size: 14px;
+  color: #a07a13;
+  padding-bottom: 15px; }
 
 p {
   padding-bottom: 15px; }
@@ -65,6 +82,15 @@ body {
   background-color: #e5e5e5;
   margin: 0;
   padding: 0; }
+
+.error {
+  text-align: center;
+  padding: 20px;
+  background-color: #a9abaa;
+  color: #282b2a;
+  margin-top: 40px; }
+  .error h1 {
+    color: #282b2a; }
 
 #wrapper {
   min-height: 100%;
@@ -128,14 +154,16 @@ nav {
   width: 640px; }
   #content #about {
     position: relative;
-    min-height: 170px;
+    min-height: 164px;
     color: #e5e5e5;
     background-color: #282b2a;
-    padding: 40px 10px 30px 10px; }
+    padding: 40px 10px 40px 10px; }
     #content #about h1 {
       color: #e7b223; }
     #content #about img {
       margin-top: 6px; }
+    #content #about li {
+      list-style-type: none; }
   #content #about:before, #content #about:after {
     content: "";
     position: absolute;
@@ -157,43 +185,53 @@ nav {
       height: 200px;
       display: inline-block;
       overflow-y: hidden; }
-      #content #social-container #social #social-github {
-        width: 131px;
+      #content #social-container #social #social-email {
+        width: 114px;
         height: 200px;
         float: left;
         background-repeat: no-repeat;
-        padding-left: 13px;
-        padding-right: 13px;
+        padding-left: 6px;
+        padding-right: 6px;
+        background-image: url('../../images/social-email-n.jpg'); }
+      #content #social-container #social #social-email:hover {
+        background-image: url('../../images/social-email-s.jpg'); }
+      #content #social-container #social #social-github {
+        width: 114px;
+        height: 200px;
+        float: left;
+        background-repeat: no-repeat;
+        padding-left: 6px;
+        padding-right: 6px;
         background-image: url('../../images/social-github-n.jpg'); }
       #content #social-container #social #social-github:hover {
         background-image: url('../../images/social-github-s.jpg'); }
       #content #social-container #social #social-twitter {
-        width: 131px;
+        width: 114px;
         height: 200px;
         float: left;
         background-repeat: no-repeat;
-        padding-left: 13px;
-        padding-right: 13px;
+        padding-left: 6px;
+        padding-right: 6px;
         background-image: url('../../images/social-twitter-n.jpg'); }
       #content #social-container #social #social-twitter:hover {
         background-image: url('../../images/social-twitter-s.jpg'); }
       #content #social-container #social #social-linkedin {
-        width: 131px;
+        width: 114px;
         height: 200px;
         float: left;
         background-repeat: no-repeat;
-        padding-left: 13px;
-        padding-right: 13px;
+        padding-left: 6px;
+        padding-right: 6px;
         background-image: url('../../images/social-linkedin-n.jpg'); }
       #content #social-container #social #social-linkedin:hover {
         background-image: url('../../images/social-linkedin-s.jpg'); }
       #content #social-container #social #social-resume {
-        width: 131px;
+        width: 114px;
         height: 200px;
         float: left;
         background-repeat: no-repeat;
-        padding-left: 13px;
-        padding-right: 13px;
+        padding-left: 6px;
+        padding-right: 6px;
         background-image: url('../../images/social-resume-n.jpg'); }
       #content #social-container #social #social-resume:hover {
         background-image: url('../../images/social-resume-s.jpg'); }
@@ -210,10 +248,72 @@ nav {
     right: 100%; }
   #content #social-container:after {
     left: 100%; }
+  #content #small-social-container {
+    height: 32px; }
+    #content #small-social-container #small-social {
+      display: inline-block; }
+      #content #small-social-container #small-social #small-social-email {
+        width: 32px;
+        height: 32px;
+        float: left;
+        background-repeat: no-repeat;
+        padding-right: 6px;
+        background-image: url('../../images/small-email-n.png'); }
+      #content #small-social-container #small-social #small-social-email:hover {
+        background-image: url('../../images/small-email-s.png'); }
+      #content #small-social-container #small-social #small-social-twitter {
+        width: 32px;
+        height: 32px;
+        float: left;
+        background-repeat: no-repeat;
+        padding-right: 6px;
+        background-image: url('../../images/small-twitter-n.png'); }
+      #content #small-social-container #small-social #small-social-twitter:hover {
+        background-image: url('../../images/small-twitter-s.png'); }
+      #content #small-social-container #small-social #small-social-github {
+        width: 32px;
+        height: 32px;
+        float: left;
+        background-repeat: no-repeat;
+        padding-right: 6px;
+        background-image: url('../../images/small-github-n.png'); }
+      #content #small-social-container #small-social #small-social-github:hover {
+        background-image: url('../../images/small-github-s.png'); }
+      #content #small-social-container #small-social #small-social-linkedin {
+        width: 32px;
+        height: 32px;
+        float: left;
+        background-repeat: no-repeat;
+        padding-right: 6px;
+        background-image: url('../../images/small-linkedin-n.png'); }
+      #content #small-social-container #small-social #small-social-linkedin:hover {
+        background-image: url('../../images/small-linkedin-s.png'); }
   #content #activities {
     padding: 30px 10px 40px 10px; }
     #content #activities .title {
       text-align: center; }
+  #content #blog {
+    padding: 30px 10px 40px 10px; }
+    #content #blog .post {
+      padding-left: 15px;
+      padding-right: 15px; }
+      #content #blog .post h1 {
+        padding-bottom: 0; }
+      #content #blog .post .radius_fix {
+        padding-bottom: 20px; }
+      #content #blog .post .morelink a, #content #blog .post .morelink a:link {
+        font-weight: bold; }
+    #content #blog .separator {
+      height: 1px;
+      background-color: #e7b223;
+      margin-top: 40px;
+      margin-bottom: 40px; }
+    #content #blog #pagination {
+      height: 30px; }
+      #content #blog #pagination .alignleft {
+        float: left; }
+      #content #blog #pagination .alignright {
+        float: right; }
 
 footer, #push {
   height: 49px; }

@@ -3,8 +3,12 @@
 
 /* IMPORT */
 
-@import url(http://fonts.googleapis.com/css?family=Abel);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
+@import url(http://fonts.googleapis.com/css
+            ?family=Abel);
+@import url(http://fonts.googleapis.com/css
+            ?family=Open+Sans:400italic,700italic,400,700);
+
+
 
 
 /* VARIABLES */
@@ -12,6 +16,7 @@
 $chloeLight: #e5e5e5;
 $chloeDark: #282b2a;
 $chloeGrey: #353b38;
+$chloeGreyLight: #a9abaa;
 $chloeGold: #e7b223;
 $chloeCopper: #a07a13;
 $chloeGreen: #30b069;
@@ -21,9 +26,10 @@ $headerHeight: 72px;
 $menuHeight: 49px;
 $footerHeight: 49px;
 $mobileWidth: 640px;
-$socialWidth: 131px;
+$socialWidth: 114px;
 $socialHeight: 200px;
-
+$smallSocialSize: 32px;
+$pictureHeight: 164px;
 
 
 
@@ -53,8 +59,16 @@ $socialHeight: 200px;
   height: $socialHeight;
   float: left;
   background-repeat: no-repeat;
-  padding-left: 13px;
-  padding-right: 13px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+@mixin smallSocialButton {
+  width: $smallSocialSize;
+  height: $smallSocialSize;
+  float: left;
+  background-repeat: no-repeat;
+  padding-right: 6px;
 }
 
 @mixin fullWidth {
@@ -66,18 +80,26 @@ $socialHeight: 200px;
   width: 9999px;
 }
 
-@mixin fontCopy {
-  font-family: 'Open Sans', Arial, sans-serif;
-  -webkit-font-smoothing: antialiased !important;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
-}
-
 @mixin fontTitle {
   font-family: Abel, sans-serif;
   -webkit-font-smoothing: antialiased !important;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 }
 
+@mixin fontCopy {
+  font-family: 'Open Sans', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased !important;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
+@mixin linkNormal {
+  color: $chloeGreen;
+  text-decoration: none;
+}
+
+@mixin linkHover {
+  color: $chloeGreenLight;
+}
 
 
 
@@ -112,10 +134,10 @@ a img.aligncenter {
 }
 
 a, a:link {
-  color: $chloeGreen;
+  @include linkNormal;
 }
 a:hover, a:active {
-  color: $chloeGreenLight;
+  @include linkHover;
 }
 
 h1 {
@@ -123,6 +145,20 @@ h1 {
   font-size: 22px;
   color: $chloeCopper;
   padding-bottom: 10px;
+
+  a, a:link {
+    @include linkNormal;
+  }
+  a:hover, a:active {
+    @include linkHover;
+  }
+}
+
+h2 {
+  @include fontTitle;
+  font-size: 14px;
+  color: $chloeCopper;
+  padding-bottom: 15px;
 }
 
 p {
@@ -145,6 +181,18 @@ body {
   background-color: $chloeLight;
   margin: 0;
   padding: 0;
+}
+
+.error {
+  text-align: center;
+  padding: 20px;
+  background-color: $chloeGreyLight;
+  color: $chloeDark;
+  margin-top: 40px;
+
+  h1 {
+    color: $chloeDark;
+  }
 }
 
 #wrapper {
@@ -216,10 +264,10 @@ nav {
 
   #about {
     position: relative;
-    min-height: 170px;
+    min-height: $pictureHeight;
     color: $chloeLight;
     background-color: $chloeDark;
-    padding: 40px 10px 30px 10px;
+    padding: 40px 10px 40px 10px;
 
     h1 {
       color: $chloeGold;
@@ -227,6 +275,10 @@ nav {
 
     img {
       margin-top: 6px;
+    }
+
+    li {
+      list-style-type: none;
     }
   }
   #about:before, #about:after {
@@ -251,6 +303,14 @@ nav {
       height: $socialHeight;
       display: inline-block;
       overflow-y: hidden;
+
+      #social-email {
+        @include socialButton;
+        background-image: url('../../images/social-email-n.jpg');
+      }
+      #social-email:hover {
+        background-image: url('../../images/social-email-s.jpg');
+      }
 
       #social-github {
         @include socialButton;
@@ -298,11 +358,94 @@ nav {
     left: 100%;
   }
 
+  #small-social-container {
+    height: $smallSocialSize;
+
+    #small-social {
+      display: inline-block;
+
+      #small-social-email {
+        @include smallSocialButton;
+        background-image: url('../../images/small-email-n.png');
+      }
+      #small-social-email:hover {
+        background-image: url('../../images/small-email-s.png');
+      }
+
+      #small-social-twitter {
+        @include smallSocialButton;
+        background-image: url('../../images/small-twitter-n.png');
+      }
+      #small-social-twitter:hover {
+        background-image: url('../../images/small-twitter-s.png');
+      }
+
+      #small-social-github {
+        @include smallSocialButton;
+        background-image: url('../../images/small-github-n.png');
+      }
+      #small-social-github:hover {
+        background-image: url('../../images/small-github-s.png');
+      }
+
+      #small-social-linkedin {
+        @include smallSocialButton;
+        background-image: url('../../images/small-linkedin-n.png');
+      }
+      #small-social-linkedin:hover {
+        background-image: url('../../images/small-linkedin-s.png');
+      }
+    }
+  }
+
   #activities {
     padding: 30px 10px 40px 10px;
 
     .title {
       text-align: center;
+    }
+  }
+
+  #blog {
+    padding: 30px 10px 40px 10px;
+
+    .post {
+      padding-left: 15px;
+      padding-right: 15px;
+
+      h1 {
+        padding-bottom: 0;
+      }
+
+      .radius_fix {
+        padding-bottom: 20px;
+      }
+
+      .morelink {
+        //properties
+
+        a, a:link {
+          font-weight: bold;
+        }
+      }
+    }
+
+    .separator {
+      height: 1px;
+      background-color: $chloeGold;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    #pagination {
+      height: 30px;
+
+      .alignleft {
+        float: left;
+      }
+      .alignright {
+        float: right;
+      }
     }
   }
 }

@@ -3,7 +3,6 @@
 
 
 
-
 /* Register widget areas */
 register_sidebar( array(
     'id'          => 'activities',
@@ -15,7 +14,11 @@ register_sidebar( array(
     'name'        => 'Portfolio',
     'description' => 'The Widget area for the Portfolio page.'
 ) );
-
+register_sidebar( array(
+    'id'          => 'blogpostaboutme',
+    'name'        => 'Blog Post About Me',
+    'description' => 'The author description that appears on blog posts.'
+) );
 
 
 
@@ -26,6 +29,17 @@ function filter_ptags_on_images($content) {
 }
 add_filter('the_content', 'filter_ptags_on_images');
 
+
+
+
+/* Change the 'Read More' text */
+add_filter( 'the_content_more_link', 'my_more_link', 10, 2 );
+
+function my_more_link( $more_link, $more_link_text ) {
+  return str_replace( $more_link_text, 
+                      '<div class="morelink">Continue reading...</div>', 
+                      $more_link );
+}
 
 
 
