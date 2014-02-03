@@ -1,11 +1,6 @@
 /* SASS */
 /* VARIABLES */
 /* MIXINS */
-* {
-  padding: 0;
-  margin: 0;
-  border: 0; }
-
 img.alignright {
   float: right;
   margin: 0 0 1em 1em; }
@@ -31,6 +26,11 @@ a img.aligncenter {
   display: block;
   margin-left: auto;
   margin-right: auto; }
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0; }
 
 p {
   padding-bottom: 15px; }
@@ -126,7 +126,7 @@ nav {
     height: 200px;
     background-image: url('../../images/social-tile.jpg');
     background-repeat: repeat-x;
-    text-align: center; }
+    text-align: justify; }
     #content #social-container #social {
       display: inline-block; }
       #content #social-container #social #social-github {
