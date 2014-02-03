@@ -12,15 +12,21 @@
 <div id="wrapper"> <!-- ends in footer.php -->
 
 <header>
-  <a href="#">
+  <a href="<?php echo bloginfo('home'); ?>">
     <img src="<?php echo bloginfo('template_url'); ?>/images/header.jpg">
   </a>
 </header>
 
 <nav>
   <div id="menu">
-    <a href="#"><div id="menu-home"></div></a>
-    <a href="#"><div id="menu-blog"></div></a>
-    <a href="#"><div id="menu-portfolio"></div></a>
+    <a href="<?php echo bloginfo('home'); ?>">
+      <div id="menu-home"></div>
+    </a>
+    <a href="<?php echo bloginfo('home'); ?>/blog">
+      <div id="menu-blog"></div>
+    </a>
+    <a href="<?php echo bloginfo('home'); ?>/portfolio">
+      <div id="menu-portfolio"></div>
+    </a>
   </div>
 </nav>

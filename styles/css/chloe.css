@@ -126,16 +126,18 @@ nav {
     height: 200px;
     background-image: url('../../images/social-tile.jpg');
     background-repeat: repeat-x;
-    text-align: justify; }
+    text-align: center; }
     #content #social-container #social {
-      display: inline-block; }
+      height: 200px;
+      display: inline-block;
+      overflow-y: hidden; }
       #content #social-container #social #social-github {
         width: 131px;
         height: 200px;
         float: left;
         background-repeat: no-repeat;
-        padding-left: 5px;
-        padding-right: 5px;
+        padding-left: 13px;
+        padding-right: 13px;
         background-image: url('../../images/social-github-n.jpg'); }
       #content #social-container #social #social-github:hover {
         background-image: url('../../images/social-github-s.jpg'); }
@@ -144,8 +146,8 @@ nav {
         height: 200px;
         float: left;
         background-repeat: no-repeat;
-        padding-left: 5px;
-        padding-right: 5px;
+        padding-left: 13px;
+        padding-right: 13px;
         background-image: url('../../images/social-twitter-n.jpg'); }
       #content #social-container #social #social-twitter:hover {
         background-image: url('../../images/social-twitter-s.jpg'); }
@@ -154,8 +156,8 @@ nav {
         height: 200px;
         float: left;
         background-repeat: no-repeat;
-        padding-left: 5px;
-        padding-right: 5px;
+        padding-left: 13px;
+        padding-right: 13px;
         background-image: url('../../images/social-linkedin-n.jpg'); }
       #content #social-container #social #social-linkedin:hover {
         background-image: url('../../images/social-linkedin-s.jpg'); }
@@ -164,8 +166,8 @@ nav {
         height: 200px;
         float: left;
         background-repeat: no-repeat;
-        padding-left: 5px;
-        padding-right: 5px;
+        padding-left: 13px;
+        padding-right: 13px;
         background-image: url('../../images/social-resume-n.jpg'); }
       #content #social-container #social #social-resume:hover {
         background-image: url('../../images/social-resume-s.jpg'); }

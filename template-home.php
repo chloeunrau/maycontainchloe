@@ -18,10 +18,18 @@ Template Name: Home
 
   <div id="social-container">
     <div id="social">
-      <a href="#"><div id="social-github"></div></a>
-      <a href="#"><div id="social-twitter"></div></a>
-      <a href="#"><div id="social-linkedin"></div></a>
-      <a href="#"><div id="social-resume"></div></a>
+      <a href="https://github.com/chloeunrau" target="_blank">
+        <div id="social-github"></div>
+      </a>
+      <a href="https://twitter.com/chloeunrau" target="_blank">
+        <div id="social-twitter"></div>
+      </a>
+      <a href="http://linkedin.com/in/chloeunrau" target="_blank">
+        <div id="social-linkedin"></div>
+      </a>
+      <a href="#">
+        <div id="social-resume" target="_blank"></div>
+      </a>
     </div>
   </div>
 
