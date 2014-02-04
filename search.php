@@ -6,9 +6,14 @@
 <div id="content">
 
   <div id="blog-controls">
+    <div class="links">
+      <ul>
+        <li><a href="<?php echo bloginfo('home'); ?>/blog">&laquo; Back to blog</a></li>
+      </ul>
+    </div>
     <?php dynamic_sidebar( 'Blog Controls' ); ?>
   </div>
-  
+
   <div id="blog">
 
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>

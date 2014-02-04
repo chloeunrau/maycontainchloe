@@ -8,9 +8,7 @@
   <div id="blog-controls">
     <div class="links">
       <ul>
-        <li><a href="<?php echo bloginfo('home'); ?>/feed" rel="alternate" type="application/rss+xml">RSS</a></li>
-        <li><a href="https://twitter.com/chloeunrau">Twitter</a></li>
-        <li><a href="#">
+        <li><!-- Space for links --></li>
       </ul>
     </div>
     <?php dynamic_sidebar( 'Blog Controls' ); ?>

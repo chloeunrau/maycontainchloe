@@ -108,6 +108,9 @@ $pictureHeight: 164px;
 
 /* STYLES */
 
+img {
+  max-width: 100%;
+}
 img.alignright {
   float: right;
   margin: 0 0 1em 1em;
