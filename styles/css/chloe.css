@@ -170,7 +170,7 @@ nav {
     top: 0;
     bottom: 0;
     width: 9999px;
-    background-color: #282b2a; }
+    background-color: inherit; }
   #content #about:before {
     right: 100%; }
   #content #about:after {
@@ -178,6 +178,7 @@ nav {
   #content #social-container {
     position: relative;
     height: 200px;
+    background-color: #30b069;
     background-image: url('../../images/social-tile.jpg');
     background-repeat: repeat-x;
     text-align: center; }
@@ -241,9 +242,9 @@ nav {
     top: 0;
     bottom: 0;
     width: 9999px;
-    background: #30b069;
-    background-image: url('../../images/social-tile.jpg');
-    background-repeat: repeat-x; }
+    background-color: inherit;
+    background-image: inherit;
+    background-repeat: inherit; }
   #content #social-container:before {
     right: 100%; }
   #content #social-container:after {
@@ -331,14 +332,69 @@ nav {
     #content #blog .separator {
       height: 1px;
       background-color: #e7b223;
-      margin-top: 40px;
-      margin-bottom: 40px; }
+      margin: 40px 0px 40px 0px; }
     #content #blog #pagination {
       height: 30px; }
       #content #blog #pagination .alignleft {
         float: left; }
       #content #blog #pagination .alignright {
         float: right; }
+  #content #portfolio {
+    padding: 0px 10px 0px 10px;
+    color: #e5e5e5; }
+    #content #portfolio li.widget {
+      position: relative;
+      min-height: 400px;
+      padding: 40px 0px 40px 0px;
+      list-style-type: none; }
+      #content #portfolio li.widget ul {
+        padding-bottom: 15px; }
+        #content #portfolio li.widget ul li {
+          list-style-type: disc;
+          margin-left: 40px; }
+      #content #portfolio li.widget h1 {
+        color: #e7b223; }
+      #content #portfolio li.widget h2 {
+        padding-bottom: 40px; }
+      #content #portfolio li.widget span.h3 {
+        font-size: 16px;
+        color: #fff; }
+      #content #portfolio li.widget span.h4 {
+        font-size: 12px;
+        color: #e7b223; }
+      #content #portfolio li.widget span.h5 {
+        font-size: 12px;
+        color: #e7b223;
+        padding: 40px 0px 0px 0px; }
+      #content #portfolio li.widget .tool {
+        padding-bottom: 3px; }
+      #content #portfolio li.widget .tool-last {
+        padding-bottom: 40px; }
+      #content #portfolio li.widget .images-spacer {
+        height: 20px; }
+      #content #portfolio li.widget .gallery dl.gallery-item {
+        margin: 0; }
+      #content #portfolio li.widget a img, #content #portfolio li.widget a:link img {
+        border-style: solid;
+        border-width: 1px;
+        border-color: #282b2a; }
+        #content #portfolio li.widget a img:hover, #content #portfolio li.widget a:link img:hover {
+          border-color: #30b069; }
+    #content #portfolio li.widget:nth-child(odd) {
+      background-color: #353b38; }
+    #content #portfolio li.widget:nth-child(even) {
+      background-color: #282b2a; }
+    #content #portfolio li.widget:before, #content #portfolio li.widget:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 9999px;
+      background-color: inherit; }
+    #content #portfolio li.widget:before {
+      right: 100%; }
+    #content #portfolio li.widget:after {
+      left: 100%; }
 
 footer, #push {
   height: 49px; }

@@ -8,7 +8,7 @@ Template Name: Portfolio
 
 <div id="content">
 
-  <div id="portfolio-container">
+  <div id="portfolio">
     <?php dynamic_sidebar( 'Portfolio' ); ?>
   </div>
 

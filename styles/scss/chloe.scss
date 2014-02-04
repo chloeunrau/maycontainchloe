@@ -13,6 +13,7 @@
 
 /* VARIABLES */
 
+$chloeWhite: #ffffff;
 $chloeLight: #e5e5e5;
 $chloeDark: #282b2a;
 $chloeGrey: #353b38;
@@ -283,7 +284,7 @@ nav {
   }
   #about:before, #about:after {
     @include fullWidth;
-    background-color: $chloeDark;
+    background-color: inherit;
   }
   #about:before {
     right: 100%;
@@ -295,6 +296,7 @@ nav {
   #social-container {
     position: relative;
     height: 200px;
+    background-color: $chloeGreen;
     background-image: url('../../images/social-tile.jpg');
     background-repeat: repeat-x;
     text-align: center;
@@ -347,9 +349,9 @@ nav {
   }
   #social-container:before, #social-container:after {
     @include fullWidth;
-    background: $chloeGreen;
-    background-image: url('../../images/social-tile.jpg');
-    background-repeat: repeat-x;
+    background-color: inherit;
+    background-image: inherit;
+    background-repeat: inherit;
   }
   #social-container:before {
     right: 100%;
@@ -475,8 +477,7 @@ nav {
     .separator {
       height: 1px;
       background-color: $chloeGold;
-      margin-top: 40px;
-      margin-bottom: 40px;
+      margin: 40px 0px 40px 0px;
     }
 
     #pagination {
@@ -488,6 +489,100 @@ nav {
       .alignright {
         float: right;
       }
+    }
+  }
+
+  #portfolio {
+    padding: 0px 10px 0px 10px;
+    color: $chloeLight;
+
+    li.widget {
+      position: relative;
+      min-height: 400px;
+      padding: 40px 0px 40px 0px;
+      list-style-type: none;
+
+      ul {
+        padding-bottom: 15px;
+
+        li {
+          list-style-type: disc;
+          margin-left: 40px;
+        }
+      }
+
+      h1 {
+        color: $chloeGold;
+      }
+
+      h2 {
+        padding-bottom: 40px;
+      }
+
+      span.h3 {
+        font-size: 16px;
+        color: $chloeWhite;
+      }
+
+      span.h4 {
+        font-size: 12px;
+        color: $chloeGold;
+      }
+
+      span.h5 {
+        font-size: 12px;
+        color: $chloeGold;
+        padding: 40px 0px 0px 0px;
+      }
+
+      .tool {
+        padding-bottom: 3px;
+      }
+
+      .tool-last {
+        padding-bottom: 40px;
+      }
+
+      .images-spacer {
+        height: 20px;
+      }
+
+      .gallery {
+        //properties
+
+        dl.gallery-item {
+          margin: 0;
+        }
+      }
+
+      a, a:link {
+        //properties
+
+        img {
+          border-style: solid;
+          border-width: 1px;
+          border-color: $chloeDark;
+        }
+        img:hover {
+          border-color: $chloeGreen;
+        }
+      }
+    }
+    li.widget:nth-child(odd) {
+      background-color: $chloeGrey;
+    }
+    li.widget:nth-child(even) {
+      background-color: $chloeDark;
+    }
+    li.widget:before, li.widget:after {
+      @include fullWidth;
+      background-color: inherit;
+    }
+    li.widget:before {
+      right: 100%;
+    }
+    li.widget:after {
+      left: 100%;
     }
   }
 }
