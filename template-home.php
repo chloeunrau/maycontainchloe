@@ -35,7 +35,7 @@ Template Name: Home
       <a href="http://linkedin.com/in/chloeunrau" target="_blank">
         <div id="social-linkedin"></div>
       </a>
-      <a href="#">
+      <a href="<?php echo bloginfo('home'); ?>/resume-chloe-unrau.pdf">
         <div id="social-resume" target="_blank"></div>
       </a>
     </div>

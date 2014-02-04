@@ -6,6 +6,12 @@
 <div id="content">
   <div id="blog">
 
+    <div id="rss">
+      <a href="<?php echo bloginfo('home'); ?>/feed">
+        Subscribe to this blog via RSS
+      </a>
+    </div>
+
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
       <div class="post">
@@ -17,7 +23,7 @@
         <h2><?php the_date(); ?></h2>
         <?php the_content( $more_link_text, $stripteaser ); ?>
       </div>
-      
+
       <div class="separator"></div>
 
       <?php endwhile; else: ?>

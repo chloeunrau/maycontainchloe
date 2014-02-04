@@ -401,8 +401,45 @@ nav {
   #activities {
     padding: 30px 10px 40px 10px;
 
+    // Styles for Recent Posts (3) Widget
+    li#recent-posts-3 {
+      height: 70px;
+      list-style-type: none;
+      margin-top: 20px;
+      margin-left: 90px;
+
+      h2.widgettitle {
+        float: left;
+      }
+      ul {
+        float: left;
+        margin-left: 50px;
+      }
+    }
+
     .title {
       text-align: center;
+      padding-bottom: 20px;
+    }
+
+    // Styles for Widgets contained on the Home Page
+    li.widget {
+      list-style-type: none;
+      padding-bottom: 40px;
+
+      img {
+        margin-top: 5px;
+      }
+
+      h1 {
+        font-size: 18px;
+        color: $chloeGrey;
+        padding-bottom: 0;
+      }
+
+      h2 {
+        color: $chloeGrey;
+      }
     }
   }
 
@@ -428,6 +465,11 @@ nav {
           font-weight: bold;
         }
       }
+    }
+
+    #rss {
+      text-align: center;
+      padding-bottom: 30px;
     }
 
     .separator {

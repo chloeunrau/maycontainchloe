@@ -290,8 +290,30 @@ nav {
         background-image: url('../../images/small-linkedin-s.png'); }
   #content #activities {
     padding: 30px 10px 40px 10px; }
+    #content #activities li#recent-posts-3 {
+      height: 70px;
+      list-style-type: none;
+      margin-top: 20px;
+      margin-left: 90px; }
+      #content #activities li#recent-posts-3 h2.widgettitle {
+        float: left; }
+      #content #activities li#recent-posts-3 ul {
+        float: left;
+        margin-left: 50px; }
     #content #activities .title {
-      text-align: center; }
+      text-align: center;
+      padding-bottom: 20px; }
+    #content #activities li.widget {
+      list-style-type: none;
+      padding-bottom: 40px; }
+      #content #activities li.widget img {
+        margin-top: 5px; }
+      #content #activities li.widget h1 {
+        font-size: 18px;
+        color: #353b38;
+        padding-bottom: 0; }
+      #content #activities li.widget h2 {
+        color: #353b38; }
   #content #blog {
     padding: 30px 10px 40px 10px; }
     #content #blog .post {
@@ -303,6 +325,9 @@ nav {
         padding-bottom: 20px; }
       #content #blog .post .morelink a, #content #blog .post .morelink a:link {
         font-weight: bold; }
+    #content #blog #rss {
+      text-align: center;
+      padding-bottom: 30px; }
     #content #blog .separator {
       height: 1px;
       background-color: #e7b223;
