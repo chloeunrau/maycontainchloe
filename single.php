@@ -2,6 +2,10 @@
 
 <div id="content">
 
+  <div id="blog-controls">
+    <?php dynamic_sidebar( 'Blog Controls' ); ?>
+  </div>
+
   <div id="blog">
 
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>

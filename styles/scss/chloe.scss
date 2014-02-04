@@ -14,6 +14,7 @@
 /* VARIABLES */
 
 $chloeWhite: #ffffff;
+$chloeBlack: #000000;
 $chloeLight: #e5e5e5;
 $chloeDark: #282b2a;
 $chloeGrey: #353b38;
@@ -445,6 +446,86 @@ nav {
     }
   }
 
+  #blog-controls {
+    position: relative;
+    height: $menuHeight;
+    background-color: $chloeGrey;
+    color: $chloeLight;
+    padding: 15px, 10px, 15px, 10px;
+
+    a, a:link {
+      color: $chloeLight;
+    }
+    a:hover, a:active {
+      color: $chloeGreenLight;
+    }
+
+    .links {
+      padding-top: 13px;
+
+      a, a:link {
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      ul {
+        //properties
+
+        li {
+          display: inline-block;
+          padding-right: 20px;
+        }
+      }
+    }
+
+    li.widget_search {
+      position: absolute;
+      top: 0px;
+      right: 0;
+      margin-top: 11px;
+      list-style-type: none;
+
+      h2.widgettitle {
+        display: none;
+      }
+
+      label {
+        display: none;
+      }
+
+      input#s {
+        width: 130px;
+        height: 25px;
+        padding: 0px 8px 0px 8px;
+        color: $chloeLight;
+        background-color: $chloeDark;
+        outline: none;
+      }
+
+      input#searchsubmit {
+        color: $chloeLight;
+        background-color: $chloeDark;
+        margin-left: -5px;
+        height: 25px;
+        padding: 0px 8px 0px 8px;
+      }
+      input#searchsubmit:hover {
+        color: $chloeGreenLight;
+        cursor: pointer;
+      }
+    }
+  }
+  #blog-controls:before, #blog-controls:after {
+    @include fullWidth;
+    background-color: inherit;
+  }
+  #blog-controls:before {
+    right: 100%;
+  }
+  #blog-controls:after {
+    left: 100%;
+  }
+
   #blog {
     padding: 30px 10px 40px 10px;
 
@@ -467,11 +548,6 @@ nav {
           font-weight: bold;
         }
       }
-    }
-
-    #rss {
-      text-align: center;
-      padding-bottom: 30px;
     }
 
     .separator {

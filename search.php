@@ -6,16 +6,9 @@
 <div id="content">
 
   <div id="blog-controls">
-    <div class="links">
-      <ul>
-        <li><a href="<?php echo bloginfo('home'); ?>/feed" rel="alternate" type="application/rss+xml">RSS</a></li>
-        <li><a href="https://twitter.com/chloeunrau">Twitter</a></li>
-        <li><a href="#">
-      </ul>
-    </div>
     <?php dynamic_sidebar( 'Blog Controls' ); ?>
   </div>
-
+  
   <div id="blog">
 
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -27,7 +20,7 @@
           </a>
         </h1>
         <h2><?php the_date(); ?></h2>
-        <?php the_content( $more_link_text, $stripteaser ); ?>
+        <?php the_excerpt(); ?>
       </div>
 
       <div class="separator"></div>

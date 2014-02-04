@@ -19,6 +19,11 @@ register_sidebar( array(
     'name'        => 'Blog Post About Me',
     'description' => 'The author description that appears on blog posts.'
 ) );
+register_sidebar( array(
+    'id'          => 'blogcontrols',
+    'name'        => 'Blog Controls',
+    'description' => 'The Widget area for the Blog pages.'
+) );
 
 
 
