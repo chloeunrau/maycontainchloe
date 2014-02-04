@@ -1,4 +1,10 @@
 /* SASS */
+/* TO DO:
+
+- Media queries for mobile layout
+- Styles for lists and galleries in blog posts
+
+*/
 /* IMPORT */
 @import url(http://fonts.googleapis.com/css
             ?family=Abel);
@@ -6,9 +12,6 @@
 @import url(http://fonts.googleapis.com/css
             ?family=Open+Sans:400italic,700italic,400,700);
 /* MIXINS */
-img {
-  max-width: 100%; }
-
 img.alignright {
   float: right;
   margin: 0 0 1em 1em; }
@@ -105,17 +108,23 @@ body {
 header {
   height: 72px;
   background-color: #e7b223;
-  background-image: url('../../images/header-tile.jpg');
+  background-image: url('../../images/header-tile.png');
+  background-size: 5px 72px;
+  background-repeat: repeat-x;
   text-align: center; }
   header img {
     border: 0;
     padding: 0;
-    margin: 0; }
+    margin: 0;
+    max-width: 100%;
+    height: auto; }
 
 nav {
   height: 49px;
   background-color: #30b069;
-  background-image: url('../../images/menu-tile.jpg');
+  background-image: url('../../images/menu-tile.png');
+  background-size: 5px 49px;
+  background-repeat: repeat-x;
   text-align: center;
   overflow: hidden; }
   nav #menu {
@@ -127,9 +136,11 @@ nav {
       padding-right: auto;
       width: 74px;
       height: 49px;
-      background-image: url('../../images/menu-home-n.jpg'); }
+      background-image: url('../../images/menu-home-n.png');
+      background-size: 74px 49px;
+      background-repeat: no-repeat; }
     nav #menu #menu-home:hover {
-      background-image: url('../../images/menu-home-s.jpg'); }
+      background-image: url('../../images/menu-home-s.png'); }
     nav #menu #menu-blog {
       background-repeat: no-repeat;
       float: left;
@@ -137,9 +148,11 @@ nav {
       padding-right: auto;
       width: 65px;
       height: 49px;
-      background-image: url('../../images/menu-blog-n.jpg'); }
+      background-image: url('../../images/menu-blog-n.png');
+      background-size: 65px 49px;
+      background-repeat: no-repeat; }
     nav #menu #menu-blog:hover {
-      background-image: url('../../images/menu-blog-s.jpg'); }
+      background-image: url('../../images/menu-blog-s.png'); }
     nav #menu #menu-portfolio {
       background-repeat: no-repeat;
       float: left;
@@ -147,9 +160,11 @@ nav {
       padding-right: auto;
       width: 105px;
       height: 49px;
-      background-image: url('../../images/menu-portfolio-n.jpg'); }
+      background-image: url('../../images/menu-portfolio-n.png');
+      background-size: 105px 49px;
+      background-repeat: no-repeat; }
     nav #menu #menu-portfolio:hover {
-      background-image: url('../../images/menu-portfolio-s.jpg'); }
+      background-image: url('../../images/menu-portfolio-s.png'); }
 
 #content {
   margin-left: auto;
@@ -182,7 +197,8 @@ nav {
     position: relative;
     height: 200px;
     background-color: #30b069;
-    background-image: url('../../images/social-tile.jpg');
+    background-image: url('../../images/social-tile.png');
+    background-size: 5px 200px;
     background-repeat: repeat-x;
     text-align: center; }
     #content #social-container #social {
@@ -194,51 +210,56 @@ nav {
         height: 200px;
         float: left;
         background-repeat: no-repeat;
+        background-size: 114px 200px;
         padding-left: 6px;
         padding-right: 6px;
-        background-image: url('../../images/social-email-n.jpg'); }
+        background-image: url('../../images/social-email-n.png'); }
       #content #social-container #social #social-email:hover {
-        background-image: url('../../images/social-email-s.jpg'); }
+        background-image: url('../../images/social-email-s.png'); }
       #content #social-container #social #social-github {
         width: 114px;
         height: 200px;
         float: left;
         background-repeat: no-repeat;
+        background-size: 114px 200px;
         padding-left: 6px;
         padding-right: 6px;
-        background-image: url('../../images/social-github-n.jpg'); }
+        background-image: url('../../images/social-github-n.png'); }
       #content #social-container #social #social-github:hover {
-        background-image: url('../../images/social-github-s.jpg'); }
+        background-image: url('../../images/social-github-s.png'); }
       #content #social-container #social #social-twitter {
         width: 114px;
         height: 200px;
         float: left;
         background-repeat: no-repeat;
+        background-size: 114px 200px;
         padding-left: 6px;
         padding-right: 6px;
-        background-image: url('../../images/social-twitter-n.jpg'); }
+        background-image: url('../../images/social-twitter-n.png'); }
       #content #social-container #social #social-twitter:hover {
-        background-image: url('../../images/social-twitter-s.jpg'); }
+        background-image: url('../../images/social-twitter-s.png'); }
       #content #social-container #social #social-linkedin {
         width: 114px;
         height: 200px;
         float: left;
         background-repeat: no-repeat;
+        background-size: 114px 200px;
         padding-left: 6px;
         padding-right: 6px;
-        background-image: url('../../images/social-linkedin-n.jpg'); }
+        background-image: url('../../images/social-linkedin-n.png'); }
       #content #social-container #social #social-linkedin:hover {
-        background-image: url('../../images/social-linkedin-s.jpg'); }
+        background-image: url('../../images/social-linkedin-s.png'); }
       #content #social-container #social #social-resume {
         width: 114px;
         height: 200px;
         float: left;
         background-repeat: no-repeat;
+        background-size: 114px 200px;
         padding-left: 6px;
         padding-right: 6px;
-        background-image: url('../../images/social-resume-n.jpg'); }
+        background-image: url('../../images/social-resume-n.png'); }
       #content #social-container #social #social-resume:hover {
-        background-image: url('../../images/social-resume-s.jpg'); }
+        background-image: url('../../images/social-resume-s.png'); }
   #content #social-container:before, #content #social-container:after {
     content: "";
     position: absolute;
@@ -247,6 +268,7 @@ nav {
     width: 9999px;
     background-color: inherit;
     background-image: inherit;
+    background-size: inherit;
     background-repeat: inherit; }
   #content #social-container:before {
     right: 100%; }
@@ -261,6 +283,7 @@ nav {
         height: 32px;
         float: left;
         background-repeat: no-repeat;
+        background-size: 32px 32px;
         padding-right: 6px;
         background-image: url('../../images/small-email-n.png'); }
       #content #small-social-container #small-social #small-social-email:hover {
@@ -270,6 +293,7 @@ nav {
         height: 32px;
         float: left;
         background-repeat: no-repeat;
+        background-size: 32px 32px;
         padding-right: 6px;
         background-image: url('../../images/small-twitter-n.png'); }
       #content #small-social-container #small-social #small-social-twitter:hover {
@@ -279,6 +303,7 @@ nav {
         height: 32px;
         float: left;
         background-repeat: no-repeat;
+        background-size: 32px 32px;
         padding-right: 6px;
         background-image: url('../../images/small-github-n.png'); }
       #content #small-social-container #small-social #small-social-github:hover {
@@ -288,6 +313,7 @@ nav {
         height: 32px;
         float: left;
         background-repeat: no-repeat;
+        background-size: 32px 32px;
         padding-right: 6px;
         background-image: url('../../images/small-linkedin-n.png'); }
       #content #small-social-container #small-social #small-social-linkedin:hover {
@@ -375,6 +401,9 @@ nav {
     left: 100%; }
   #content #blog {
     padding: 30px 10px 40px 10px; }
+    #content #blog img {
+      max-width: 590px;
+      height: auto; }
     #content #blog .post {
       padding-left: 15px;
       padding-right: 15px; }
@@ -456,6 +485,13 @@ footer, #push {
 
 footer {
   background-color: #e7b223;
-  background-image: url('../../images/footer-tile.jpg');
+  background-image: url('../../images/footer-tile.png');
   background-repeat: repeat-x;
+  background-size: 5px 45px;
   text-align: center; }
+  footer img {
+    max-width: 100%;
+    height: auto; }
+
+#image-loader {
+  display: none; }

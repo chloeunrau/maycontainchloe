@@ -1,6 +1,14 @@
 /* SASS */
 
 
+/* TO DO:
+
+- Media queries for mobile layout
+- Styles for lists and galleries in blog posts
+
+*/
+
+
 /* IMPORT */
 
 @import url(http://fonts.googleapis.com/css
@@ -25,13 +33,21 @@ $chloeGreen: #30b069;
 $chloeGreenLight: #4edf8e;
 
 $headerHeight: 72px;
+$menuHomeWidth: 74px;
+$menuBlogWidth: 65px;
+$menuPortfolioWidth: 105px;
 $menuHeight: 49px;
 $footerHeight: 49px;
 $mobileWidth: 640px;
 $socialWidth: 114px;
 $socialHeight: 200px;
 $smallSocialSize: 32px;
+$pictureWidth: 123px;
 $pictureHeight: 164px;
+$tileHeaderSize: 5px 72px;
+$tileMenuSize: 5px 49px;
+$tileSocialSize: 5px 200px;
+$tileFooterSize: 5px 45px;
 
 
 
@@ -61,6 +77,7 @@ $pictureHeight: 164px;
   height: $socialHeight;
   float: left;
   background-repeat: no-repeat;
+  background-size: $socialWidth $socialHeight;
   padding-left: 6px;
   padding-right: 6px;
 }
@@ -70,6 +87,7 @@ $pictureHeight: 164px;
   height: $smallSocialSize;
   float: left;
   background-repeat: no-repeat;
+  background-size: $smallSocialSize $smallSocialSize;
   padding-right: 6px;
 }
 
@@ -108,9 +126,6 @@ $pictureHeight: 164px;
 
 /* STYLES */
 
-img {
-  max-width: 100%;
-}
 img.alignright {
   float: right;
   margin: 0 0 1em 1em;
@@ -211,20 +226,26 @@ body {
 header {
   height: $headerHeight;
   background-color: $chloeGold;
-  background-image: url('../../images/header-tile.jpg');
+  background-image: url('../../images/header-tile.png');
+  background-size: $tileHeaderSize;
+  background-repeat: repeat-x;
   text-align: center;
 
   img {
     border: 0;
     padding: 0;
     margin: 0;
+    max-width: 100%;
+    height: auto;
   }
 }
 
 nav {
   height: $menuHeight;
   background-color: $chloeGreen;
-  background-image: url('../../images/menu-tile.jpg');
+  background-image: url('../../images/menu-tile.png');
+  background-size: $tileMenuSize;
+  background-repeat: repeat-x;
   text-align: center;
   overflow: hidden;
 
@@ -235,30 +256,36 @@ nav {
       @include menuButton;
       width: 74px;
       height: $menuHeight;
-      background-image: url('../../images/menu-home-n.jpg');
+      background-image: url('../../images/menu-home-n.png');
+      background-size: $menuHomeWidth $menuHeight;
+      background-repeat: no-repeat;
     }
     #menu-home:hover {
-      background-image: url('../../images/menu-home-s.jpg');
+      background-image: url('../../images/menu-home-s.png');
     }
 
     #menu-blog {
       @include menuButton;
       width: 65px;
       height: $menuHeight;
-      background-image: url('../../images/menu-blog-n.jpg');
+      background-image: url('../../images/menu-blog-n.png');
+      background-size: $menuBlogWidth $menuHeight;
+      background-repeat: no-repeat;
     }
     #menu-blog:hover {
-      background-image: url('../../images/menu-blog-s.jpg');
+      background-image: url('../../images/menu-blog-s.png');
     }
 
     #menu-portfolio {
       @include menuButton;
       width: 105px;
       height: $menuHeight;
-      background-image: url('../../images/menu-portfolio-n.jpg');
+      background-image: url('../../images/menu-portfolio-n.png');
+      background-size: $menuPortfolioWidth $menuHeight;
+      background-repeat: no-repeat;
     }
     #menu-portfolio:hover {
-      background-image: url('../../images/menu-portfolio-s.jpg');
+      background-image: url('../../images/menu-portfolio-s.png');
     }
   }
 }
@@ -301,7 +328,8 @@ nav {
     position: relative;
     height: 200px;
     background-color: $chloeGreen;
-    background-image: url('../../images/social-tile.jpg');
+    background-image: url('../../images/social-tile.png');
+    background-size: $tileSocialSize;
     background-repeat: repeat-x;
     text-align: center;
 
@@ -312,42 +340,42 @@ nav {
 
       #social-email {
         @include socialButton;
-        background-image: url('../../images/social-email-n.jpg');
+        background-image: url('../../images/social-email-n.png');
       }
       #social-email:hover {
-        background-image: url('../../images/social-email-s.jpg');
+        background-image: url('../../images/social-email-s.png');
       }
 
       #social-github {
         @include socialButton;
-        background-image: url('../../images/social-github-n.jpg');
+        background-image: url('../../images/social-github-n.png');
       }
       #social-github:hover {
-        background-image: url('../../images/social-github-s.jpg');
+        background-image: url('../../images/social-github-s.png');
       }
 
       #social-twitter {
         @include socialButton;
-        background-image: url('../../images/social-twitter-n.jpg');
+        background-image: url('../../images/social-twitter-n.png');
       }
       #social-twitter:hover {
-        background-image: url('../../images/social-twitter-s.jpg');
+        background-image: url('../../images/social-twitter-s.png');
       }
 
       #social-linkedin {
         @include socialButton;
-        background-image: url('../../images/social-linkedin-n.jpg');
+        background-image: url('../../images/social-linkedin-n.png');
       }
       #social-linkedin:hover {
-        background-image: url('../../images/social-linkedin-s.jpg');
+        background-image: url('../../images/social-linkedin-s.png');
       }
 
       #social-resume {
         @include socialButton;
-        background-image: url('../../images/social-resume-n.jpg');
+        background-image: url('../../images/social-resume-n.png');
       }
       #social-resume:hover {
-        background-image: url('../../images/social-resume-s.jpg');
+        background-image: url('../../images/social-resume-s.png');
       }
     }
   }
@@ -355,6 +383,7 @@ nav {
     @include fullWidth;
     background-color: inherit;
     background-image: inherit;
+    background-size: inherit;
     background-repeat: inherit;
   }
   #social-container:before {
@@ -532,6 +561,11 @@ nav {
   #blog {
     padding: 30px 10px 40px 10px;
 
+    img {
+      max-width: 590px;
+      height: auto;
+    }
+
     .post {
       padding-left: 15px;
       padding-right: 15px;
@@ -672,7 +706,17 @@ footer, #push {
 
 footer {
   background-color: $chloeGold;
-  background-image: url('../../images/footer-tile.jpg');
+  background-image: url('../../images/footer-tile.png');
   background-repeat: repeat-x;
+  background-size: $tileFooterSize;
   text-align: center;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+#image-loader {
+  display: none;
 }

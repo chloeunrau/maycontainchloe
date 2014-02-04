@@ -42,7 +42,7 @@
 
     <img class="alignleft size-full" 
          alt="Chloe Unrau" 
-         src="<?php echo bloginfo('template_url'); ?>/images/chloe.jpg"/>
+         src="<?php echo bloginfo('template_url'); ?>/images/chloe.png" width="123px" height="164px" />
 
     <h1>Chloe Unrau</h1>
 
@@ -50,9 +50,6 @@
 
     <div id="small-social-container">
       <div id="small-social">
-        <a href="mailto:chloe.unrau@gmail.com">
-          <div id="small-social-email"></div>
-        </a>
         <a href="https://twitter.com/chloeunrau" target="_blank">
           <div id="small-social-twitter"></div>
         </a>
@@ -61,6 +58,9 @@
         </a>
         <a href="http://linkedin.com/in/chloeunrau" target="_blank">
           <div id="small-social-linkedin"></div>
+        </a>
+        <a href="mailto:chloe.unrau@gmail.com">
+          <div id="small-social-email"></div>
         </a>
       </div>
     </div>
