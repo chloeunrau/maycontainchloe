@@ -622,30 +622,37 @@ nav {
     left: 100%; }
   #content #blog {
     padding: 30px 10px 40px 10px; }
-    #content #blog img {
-      max-width: 100%;
-      height: auto; }
-    #content #blog a img, #content #blog a:link img {
-      border-style: solid;
-      border-width: 1px;
-      border-color: #fff; }
-      #content #blog a img:hover, #content #blog a:link img:hover {
-        border-color: #30b069; }
-    #content #blog ul {
-      padding-left: 40px;
-      padding-bottom: 20px; }
-    #content #blog blockquote {
-      color: #a9abaa;
-      padding: 15px 0px 15px 0px; }
     #content #blog .post {
       padding-left: 15px;
       padding-right: 15px; }
+      #content #blog .post p.wp-caption-text {
+        font-size: 12px;
+        color: #888; }
+      #content #blog .post p.wp-caption-text:hover {
+        color: #353b38; }
       #content #blog .post h1 {
         padding-bottom: 0; }
       #content #blog .post .radius_fix {
         padding-bottom: 20px; }
       #content #blog .post .morelink a, #content #blog .post .morelink a:link {
         font-weight: bold; }
+      #content #blog .post img {
+        max-width: 100%;
+        height: auto; }
+      #content #blog .post a img, #content #blog .post a:link img {
+        border-style: solid;
+        border-width: 1px;
+        border-color: #fff; }
+        #content #blog .post a img:hover, #content #blog .post a:link img:hover {
+          border-color: #30b069; }
+      #content #blog .post ul {
+        padding-left: 40px;
+        padding-bottom: 20px; }
+      #content #blog .post blockquote {
+        color: #888;
+        padding: 15px 0px 15px 0px; }
+      #content #blog .post blockquote:hover {
+        color: #353b38; }
     #content #blog .separator {
       height: 1px;
       background-color: #e7b223;

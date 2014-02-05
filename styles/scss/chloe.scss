@@ -19,6 +19,7 @@ $chloeLight: #e5e5e5;
 $chloeDark: #282b2a;
 $chloeGrey: #353b38;
 $chloeGreyLight: #a9abaa;
+$chloeGreyMedium: #888888;
 $chloeGold: #e7b223;
 $chloeCopper: #a07a13;
 $chloeGreen: #30b069;
@@ -759,36 +760,17 @@ nav {
   #blog {
     padding: 30px 10px 40px 10px;
 
-    img {
-      @include imgAuto;
-    }
-
-    a, a:link {
-      //
-
-      img {
-        border-style: solid;
-        border-width: 1px;
-        border-color: $chloeWhite;
-      }
-      img:hover {
-        border-color: $chloeGreen;
-      }
-    }
-
-    ul {
-      padding-left: 40px;
-      padding-bottom: 20px;
-    }
-
-    blockquote {
-      color: $chloeGreyLight;
-      padding: 15px 0px 15px 0px;
-    }
-
     .post {
       padding-left: 15px;
       padding-right: 15px;
+
+      p.wp-caption-text {
+        font-size: 12px;
+        color: $chloeGreyMedium;
+      }
+      p.wp-caption-text:hover {
+        color: $chloeGrey;
+      }
 
       h1 {
         padding-bottom: 0;
@@ -804,6 +786,36 @@ nav {
         a, a:link {
           font-weight: bold;
         }
+      }
+
+      img {
+        @include imgAuto;
+      }
+
+      a, a:link {
+        //
+
+        img {
+          border-style: solid;
+          border-width: 1px;
+          border-color: $chloeWhite;
+        }
+        img:hover {
+          border-color: $chloeGreen;
+        }
+      }
+
+      ul {
+        padding-left: 40px;
+        padding-bottom: 20px;
+      }
+
+      blockquote {
+        color: $chloeGreyMedium;
+        padding: 15px 0px 15px 0px;
+      }
+      blockquote:hover {
+        color: $chloeGrey;
       }
     }
 
