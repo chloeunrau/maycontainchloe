@@ -43,8 +43,7 @@ a, a:link {
   text-decoration: none; }
 
 a:hover, a:active {
-  color: #4edf8e;
-  /* STYLES */ }
+  color: #4edf8e; }
 
 h1 {
   font-family: Abel, sans-serif;
@@ -57,8 +56,7 @@ h1 {
     color: #30b069;
     text-decoration: none; }
   h1 a:hover, h1 a:active {
-    color: #4edf8e;
-    /* STYLES */ }
+    color: #4edf8e; }
 
 h2 {
   font-family: Abel, sans-serif;
@@ -70,6 +68,10 @@ h2 {
 
 p {
   padding-bottom: 15px; }
+
+.tooltip {
+  position: relative;
+  display: inline; }
 
 * {
   padding: 0;
@@ -115,9 +117,7 @@ header {
   header img {
     border: 0;
     padding: 0;
-    margin: 0;
-    max-width: 100%;
-    height: auto; }
+    margin: 0; }
 
 nav {
   height: 49px;
@@ -125,8 +125,7 @@ nav {
   background-image: url('../../images/menu-tile.png');
   background-size: 5px 49px;
   background-repeat: repeat-x;
-  text-align: center;
-  overflow: hidden; }
+  text-align: center; }
   nav #menu {
     display: inline-block; }
     nav #menu #menu-home {
@@ -169,7 +168,7 @@ nav {
 #content {
   margin-left: auto;
   margin-right: auto;
-  width: 640px; }
+  max-width: 640px; }
   #content #about {
     position: relative;
     min-height: 164px;
@@ -195,71 +194,216 @@ nav {
     left: 100%; }
   #content #social-container {
     position: relative;
+    text-align: center; }
+    @media screen and (max-width: 639px) {
+  #content #social-container {
+    height: 40px;
+    background-color: #30b069;
+    padding-top: 10px; } }
+    @media screen and (min-width: 640px) {
+  #content #social-container {
     height: 200px;
     background-color: #30b069;
     background-image: url('../../images/social-tile.png');
     background-size: 5px 200px;
-    background-repeat: repeat-x;
-    text-align: center; }
+    background-repeat: repeat-x; } }
     #content #social-container #social {
-      height: 200px;
-      display: inline-block;
-      overflow-y: hidden; }
-      #content #social-container #social #social-email {
-        width: 114px;
-        height: 200px;
-        float: left;
-        background-repeat: no-repeat;
-        background-size: 114px 200px;
-        padding-left: 6px;
-        padding-right: 6px;
-        background-image: url('../../images/social-email-n.png'); }
-      #content #social-container #social #social-email:hover {
-        background-image: url('../../images/social-email-s.png'); }
-      #content #social-container #social #social-github {
-        width: 114px;
-        height: 200px;
-        float: left;
-        background-repeat: no-repeat;
-        background-size: 114px 200px;
-        padding-left: 6px;
-        padding-right: 6px;
-        background-image: url('../../images/social-github-n.png'); }
-      #content #social-container #social #social-github:hover {
-        background-image: url('../../images/social-github-s.png'); }
-      #content #social-container #social #social-twitter {
-        width: 114px;
-        height: 200px;
-        float: left;
-        background-repeat: no-repeat;
-        background-size: 114px 200px;
-        padding-left: 6px;
-        padding-right: 6px;
-        background-image: url('../../images/social-twitter-n.png'); }
-      #content #social-container #social #social-twitter:hover {
-        background-image: url('../../images/social-twitter-s.png'); }
-      #content #social-container #social #social-linkedin {
-        width: 114px;
-        height: 200px;
-        float: left;
-        background-repeat: no-repeat;
-        background-size: 114px 200px;
-        padding-left: 6px;
-        padding-right: 6px;
-        background-image: url('../../images/social-linkedin-n.png'); }
-      #content #social-container #social #social-linkedin:hover {
-        background-image: url('../../images/social-linkedin-s.png'); }
-      #content #social-container #social #social-resume {
-        width: 114px;
-        height: 200px;
-        float: left;
-        background-repeat: no-repeat;
-        background-size: 114px 200px;
-        padding-left: 6px;
-        padding-right: 6px;
-        background-image: url('../../images/social-resume-n.png'); }
-      #content #social-container #social #social-resume:hover {
-        background-image: url('../../images/social-resume-s.png'); }
+      display: inline-block; }
+      @media screen and (max-width: 639px) {
+    #content #social-container #social #social-email {
+      width: 32px;
+      height: 32px;
+      float: left;
+      background-repeat: no-repeat;
+      background-size: 32px 32px;
+      padding-right: 6px;
+      background-image: url('../../images/small-email-n.png'); } }
+        @media screen and (min-width: 640px) {
+  #content #social-container #social #social-email {
+    width: 114px;
+    height: 200px;
+    float: left;
+    background-repeat: no-repeat;
+    background-size: 114px 200px;
+    padding-left: 6px;
+    padding-right: 6px;
+    background-image: url('../../images/social-email-n.png'); } }
+      @media screen and (max-width: 639px) {
+    #content #social-container #social #social-email:hover {
+      background-image: url('../../images/small-email-s.png'); } }
+        @media screen and (min-width: 640px) {
+  #content #social-container #social #social-email:hover {
+    background-image: url('../../images/social-email-s.png'); } }
+      @media screen and (max-width: 639px) {
+    #content #social-container #social #social-email:hover:after {
+      background-color: #30b069;
+      border-radius: 5px;
+      bottom: 5px;
+      color: #353b38;
+      font-weight: bold;
+      left: 20%;
+      padding: 5px 15px;
+      position: absolute;
+      z-index: 98;
+      width: 220px;
+      /* STYLES */
+      content: "Send me an Email"; } }
+      @media screen and (max-width: 639px) {
+    #content #social-container #social #social-github {
+      width: 32px;
+      height: 32px;
+      float: left;
+      background-repeat: no-repeat;
+      background-size: 32px 32px;
+      padding-right: 6px;
+      background-image: url('../../images/small-github-n.png'); } }
+        @media screen and (min-width: 640px) {
+  #content #social-container #social #social-github {
+    width: 114px;
+    height: 200px;
+    float: left;
+    background-repeat: no-repeat;
+    background-size: 114px 200px;
+    padding-left: 6px;
+    padding-right: 6px;
+    background-image: url('../../images/social-github-n.png'); } }
+      @media screen and (max-width: 639px) {
+    #content #social-container #social #social-github:hover {
+      background-image: url('../../images/small-github-s.png'); } }
+        @media screen and (min-width: 640px) {
+  #content #social-container #social #social-github:hover {
+    background-image: url('../../images/social-github-s.png'); } }
+      @media screen and (max-width: 639px) {
+    #content #social-container #social #social-github:hover:after {
+      background-color: #30b069;
+      border-radius: 5px;
+      bottom: 5px;
+      color: #353b38;
+      font-weight: bold;
+      left: 20%;
+      padding: 5px 15px;
+      position: absolute;
+      z-index: 98;
+      width: 220px;
+      /* STYLES */
+      content: "Visit me on GitHub"; } }
+      @media screen and (max-width: 639px) {
+    #content #social-container #social #social-twitter {
+      width: 32px;
+      height: 32px;
+      float: left;
+      background-repeat: no-repeat;
+      background-size: 32px 32px;
+      padding-right: 6px;
+      background-image: url('../../images/small-twitter-n.png'); } }
+        @media screen and (min-width: 640px) {
+  #content #social-container #social #social-twitter {
+    width: 114px;
+    height: 200px;
+    float: left;
+    background-repeat: no-repeat;
+    background-size: 114px 200px;
+    padding-left: 6px;
+    padding-right: 6px;
+    background-image: url('../../images/social-twitter-n.png'); } }
+      @media screen and (max-width: 639px) {
+    #content #social-container #social #social-twitter:hover {
+      background-image: url('../../images/small-twitter-s.png'); } }
+        @media screen and (min-width: 640px) {
+  #content #social-container #social #social-twitter:hover {
+    background-image: url('../../images/social-twitter-s.png'); } }
+      @media screen and (max-width: 639px) {
+    #content #social-container #social #social-twitter:hover:after {
+      background-color: #30b069;
+      border-radius: 5px;
+      bottom: 5px;
+      color: #353b38;
+      font-weight: bold;
+      left: 20%;
+      padding: 5px 15px;
+      position: absolute;
+      z-index: 98;
+      width: 220px;
+      /* STYLES */
+      content: "Follow me on Twitter"; } }
+      @media screen and (max-width: 639px) {
+    #content #social-container #social #social-linkedin {
+      width: 32px;
+      height: 32px;
+      float: left;
+      background-repeat: no-repeat;
+      background-size: 32px 32px;
+      padding-right: 6px;
+      background-image: url('../../images/small-linkedin-n.png'); } }
+        @media screen and (min-width: 640px) {
+  #content #social-container #social #social-linkedin {
+    width: 114px;
+    height: 200px;
+    float: left;
+    background-repeat: no-repeat;
+    background-size: 114px 200px;
+    padding-left: 6px;
+    padding-right: 6px;
+    background-image: url('../../images/social-linkedin-n.png'); } }
+      @media screen and (max-width: 639px) {
+    #content #social-container #social #social-linkedin:hover {
+      background-image: url('../../images/small-linkedin-s.png'); } }
+        @media screen and (min-width: 640px) {
+  #content #social-container #social #social-linkedin:hover {
+    background-image: url('../../images/social-linkedin-s.png'); } }
+      @media screen and (max-width: 639px) {
+    #content #social-container #social #social-linkedin:hover:after {
+      background-color: #30b069;
+      border-radius: 5px;
+      bottom: 5px;
+      color: #353b38;
+      font-weight: bold;
+      left: 20%;
+      padding: 5px 15px;
+      position: absolute;
+      z-index: 98;
+      width: 220px;
+      /* STYLES */
+      content: "Add me on LinkedIn"; } }
+      @media screen and (max-width: 639px) {
+    #content #social-container #social #social-resume {
+      width: 32px;
+      height: 32px;
+      float: left;
+      background-repeat: no-repeat;
+      background-size: 32px 32px;
+      padding-right: 6px;
+      background-image: url('../../images/small-resume-n.png'); } }
+        @media screen and (min-width: 640px) {
+  #content #social-container #social #social-resume {
+    width: 114px;
+    height: 200px;
+    float: left;
+    background-repeat: no-repeat;
+    background-size: 114px 200px;
+    padding-left: 6px;
+    padding-right: 6px;
+    background-image: url('../../images/social-resume-n.png'); } }
+      @media screen and (max-width: 639px) {
+    #content #social-container #social #social-resume:hover {
+      background-image: url('../../images/small-resume-s.png'); } }
+        @media screen and (min-width: 640px) {
+  #content #social-container #social #social-resume:hover {
+    background-image: url('../../images/social-resume-s.png'); } }
+      @media screen and (max-width: 639px) {
+    #content #social-container #social #social-resume:hover:after {
+      background-color: #30b069;
+      border-radius: 5px;
+      bottom: 5px;
+      color: #353b38;
+      font-weight: bold;
+      left: 20%;
+      padding: 5px 15px;
+      position: absolute;
+      z-index: 98;
+      width: 220px;
+      /* STYLES */
+      content: "Download my Resume"; } }
   #content #social-container:before, #content #social-container:after {
     content: "";
     position: absolute;
@@ -288,6 +432,19 @@ nav {
         background-image: url('../../images/small-email-n.png'); }
       #content #small-social-container #small-social #small-social-email:hover {
         background-image: url('../../images/small-email-s.png'); }
+      #content #small-social-container #small-social #small-social-email:hover:after {
+        background-color: #30b069;
+        border-radius: 5px;
+        bottom: 5px;
+        color: #353b38;
+        font-weight: bold;
+        left: 20%;
+        padding: 5px 15px;
+        position: absolute;
+        z-index: 98;
+        width: 220px;
+        /* STYLES */
+        content: "Send me an email"; }
       #content #small-social-container #small-social #small-social-twitter {
         width: 32px;
         height: 32px;
@@ -298,6 +455,19 @@ nav {
         background-image: url('../../images/small-twitter-n.png'); }
       #content #small-social-container #small-social #small-social-twitter:hover {
         background-image: url('../../images/small-twitter-s.png'); }
+      #content #small-social-container #small-social #small-social-twitter:hover:after {
+        background-color: #30b069;
+        border-radius: 5px;
+        bottom: 5px;
+        color: #353b38;
+        font-weight: bold;
+        left: 20%;
+        padding: 5px 15px;
+        position: absolute;
+        z-index: 98;
+        width: 220px;
+        /* STYLES */
+        content: "Follow me on Twitter"; }
       #content #small-social-container #small-social #small-social-github {
         width: 32px;
         height: 32px;
@@ -308,6 +478,19 @@ nav {
         background-image: url('../../images/small-github-n.png'); }
       #content #small-social-container #small-social #small-social-github:hover {
         background-image: url('../../images/small-github-s.png'); }
+      #content #small-social-container #small-social #small-social-github:hover:after {
+        background-color: #30b069;
+        border-radius: 5px;
+        bottom: 5px;
+        color: #353b38;
+        font-weight: bold;
+        left: 20%;
+        padding: 5px 15px;
+        position: absolute;
+        z-index: 98;
+        width: 220px;
+        /* STYLES */
+        content: "Visit me on GitHub"; }
       #content #small-social-container #small-social #small-social-linkedin {
         width: 32px;
         height: 32px;
@@ -318,6 +501,19 @@ nav {
         background-image: url('../../images/small-linkedin-n.png'); }
       #content #small-social-container #small-social #small-social-linkedin:hover {
         background-image: url('../../images/small-linkedin-s.png'); }
+      #content #small-social-container #small-social #small-social-linkedin:hover:after {
+        background-color: #30b069;
+        border-radius: 5px;
+        bottom: 5px;
+        color: #353b38;
+        font-weight: bold;
+        left: 20%;
+        padding: 5px 15px;
+        position: absolute;
+        z-index: 98;
+        width: 220px;
+        /* STYLES */
+        content: "Add me on LinkedIn"; }
   #content #activities {
     padding: 30px 10px 40px 10px; }
     #content #activities li#recent-posts-3 {
@@ -402,7 +598,7 @@ nav {
   #content #blog {
     padding: 30px 10px 40px 10px; }
     #content #blog img {
-      max-width: 590px;
+      max-width: 100%;
       height: auto; }
     #content #blog .post {
       padding-left: 15px;
@@ -450,6 +646,9 @@ nav {
         font-size: 12px;
         color: #e7b223;
         padding: 40px 0px 0px 0px; }
+      #content #portfolio li.widget img {
+        max-width: 100%;
+        height: auto; }
       #content #portfolio li.widget .tool {
         padding-bottom: 3px; }
       #content #portfolio li.widget .tool-last {

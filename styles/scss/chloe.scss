@@ -1,14 +1,6 @@
 /* SASS */
 
 
-/* TO DO:
-
-- Media queries for mobile layout
-- Styles for lists and galleries in blog posts
-
-*/
-
-
 /* IMPORT */
 
 @import url(http://fonts.googleapis.com/css
@@ -32,13 +24,14 @@ $chloeCopper: #a07a13;
 $chloeGreen: #30b069;
 $chloeGreenLight: #4edf8e;
 
+$fullWidth: 640px;
+$smallWidth: 639px;
 $headerHeight: 72px;
 $menuHomeWidth: 74px;
 $menuBlogWidth: 65px;
 $menuPortfolioWidth: 105px;
 $menuHeight: 49px;
 $footerHeight: 49px;
-$mobileWidth: 640px;
 $socialWidth: 114px;
 $socialHeight: 200px;
 $smallSocialSize: 32px;
@@ -121,6 +114,24 @@ $tileFooterSize: 5px 45px;
   color: $chloeGreenLight;
 }
 
+@mixin imgAuto {
+  max-width: 100%;
+  height: auto;
+}
+
+@mixin toolTip {
+  background-color: $chloeGreen;
+  border-radius: 5px;
+  bottom: 5px;
+  color: $chloeGrey;
+  font-weight: bold;
+  left: 20%;
+  padding: 5px 15px;
+  position: absolute;
+  z-index: 98;
+  width: 220px;
+}
+
 
 
 
@@ -185,13 +196,17 @@ p {
   padding-bottom: 15px;
 }
 
+.tooltip {
+  position: relative;
+  display: inline;
+}
+
 * {
   @include zeroPMB;
 }
 
 html, body {
   height: 100%;
-  //overflow-x: hidden;
 }
 
 body {
@@ -235,8 +250,6 @@ header {
     border: 0;
     padding: 0;
     margin: 0;
-    max-width: 100%;
-    height: auto;
   }
 }
 
@@ -247,7 +260,6 @@ nav {
   background-size: $tileMenuSize;
   background-repeat: repeat-x;
   text-align: center;
-  overflow: hidden;
 
   #menu {
     display: inline-block;
@@ -292,7 +304,7 @@ nav {
 
 #content {
   @include centre;
-  width: $mobileWidth;
+  max-width: $fullWidth;
 
   #about {
     position: relative;
@@ -326,56 +338,184 @@ nav {
 
   #social-container {
     position: relative;
-    height: 200px;
-    background-color: $chloeGreen;
-    background-image: url('../../images/social-tile.png');
-    background-size: $tileSocialSize;
-    background-repeat: repeat-x;
     text-align: center;
 
+    @media screen and (max-width: $smallWidth) {
+      // properties for mobile version
+      height: 40px;
+      background-color: $chloeGreen;
+      padding-top: 10px;
+    }
+    @media screen and (min-width: $fullWidth) {
+      // properties for regular version
+      height: 200px;
+      background-color: $chloeGreen;
+      background-image: url('../../images/social-tile.png');
+      background-size: $tileSocialSize;
+      background-repeat: repeat-x;
+    }
+
     #social {
-      height: $socialHeight;
       display: inline-block;
-      overflow-y: hidden;
 
       #social-email {
-        @include socialButton;
-        background-image: url('../../images/social-email-n.png');
+        //
+        @media screen and (max-width: $smallWidth) {
+          // properties for mobile version
+          @include smallSocialButton;
+          background-image: url('../../images/small-email-n.png')
+        }
+        @media screen and (min-width: $fullWidth) {
+          // properties for regular version
+          @include socialButton;
+          background-image: url('../../images/social-email-n.png');
+        }
       }
       #social-email:hover {
-        background-image: url('../../images/social-email-s.png');
+        //
+        @media screen and (max-width: $smallWidth) {
+          // properties for mobile version
+          background-image: url('../../images/small-email-s.png')
+        }
+        @media screen and (min-width: $fullWidth) {
+          // properties for regular version
+          background-image: url('../../images/social-email-s.png');
+        }
+      }
+      #social-email:hover:after {
+        //
+        @media screen and (max-width: $smallWidth) {
+          @include toolTip;
+          content: "Send me an Email";
+        }
       }
 
       #social-github {
-        @include socialButton;
-        background-image: url('../../images/social-github-n.png');
+        //
+        @media screen and (max-width: $smallWidth) {
+          // properties for mobile version
+          @include smallSocialButton;
+          background-image: url('../../images/small-github-n.png')
+        }
+        @media screen and (min-width: $fullWidth) {
+          // properties for regular version
+          @include socialButton;
+          background-image: url('../../images/social-github-n.png');
+        }
       }
       #social-github:hover {
-        background-image: url('../../images/social-github-s.png');
+        //
+        @media screen and (max-width: $smallWidth) {
+          // properties for mobile version
+          background-image: url('../../images/small-github-s.png')
+        }
+        @media screen and (min-width: $fullWidth) {
+          // properties for regular version
+          background-image: url('../../images/social-github-s.png');
+        }
+      }
+      #social-github:hover:after {
+        //
+        @media screen and (max-width: $smallWidth) {
+          @include toolTip;
+          content: "Visit me on GitHub";
+        }
       }
 
       #social-twitter {
-        @include socialButton;
-        background-image: url('../../images/social-twitter-n.png');
+        //
+        @media screen and (max-width: $smallWidth) {
+          // properties for mobile version
+          @include smallSocialButton;
+          background-image: url('../../images/small-twitter-n.png')
+        }
+        @media screen and (min-width: $fullWidth) {
+          // properties for regular version
+          @include socialButton;
+          background-image: url('../../images/social-twitter-n.png');
+        }
       }
       #social-twitter:hover {
-        background-image: url('../../images/social-twitter-s.png');
+        //
+        @media screen and (max-width: $smallWidth) {
+          // properties for mobile version
+          background-image: url('../../images/small-twitter-s.png')
+        }
+        @media screen and (min-width: $fullWidth) {
+          // properties for regular version
+          background-image: url('../../images/social-twitter-s.png');
+        }
+      }
+      #social-twitter:hover:after {
+        //
+        @media screen and (max-width: $smallWidth) {
+          @include toolTip;
+          content: "Follow me on Twitter";
+        }
       }
 
       #social-linkedin {
-        @include socialButton;
-        background-image: url('../../images/social-linkedin-n.png');
+        //
+        @media screen and (max-width: $smallWidth) {
+          // properties for mobile version
+          @include smallSocialButton;
+          background-image: url('../../images/small-linkedin-n.png')
+        }
+        @media screen and (min-width: $fullWidth) {
+          // properties for regular version
+          @include socialButton;
+          background-image: url('../../images/social-linkedin-n.png');
+        }
       }
       #social-linkedin:hover {
-        background-image: url('../../images/social-linkedin-s.png');
+        //
+        @media screen and (max-width: $smallWidth) {
+          // properties for mobile version
+          background-image: url('../../images/small-linkedin-s.png')
+        }
+        @media screen and (min-width: $fullWidth) {
+          // properties for regular version
+          background-image: url('../../images/social-linkedin-s.png');
+        }
+      }
+      #social-linkedin:hover:after {
+        //
+        @media screen and (max-width: $smallWidth) {
+          @include toolTip;
+          content: "Add me on LinkedIn";
+        }
       }
 
       #social-resume {
-        @include socialButton;
-        background-image: url('../../images/social-resume-n.png');
+        //
+        @media screen and (max-width: $smallWidth) {
+          // properties for mobile version
+          @include smallSocialButton;
+          background-image: url('../../images/small-resume-n.png')
+        }
+        @media screen and (min-width: $fullWidth) {
+          // properties for regular version
+          @include socialButton;
+          background-image: url('../../images/social-resume-n.png');
+        }
       }
       #social-resume:hover {
-        background-image: url('../../images/social-resume-s.png');
+        //
+        @media screen and (max-width: $smallWidth) {
+          // properties for mobile version
+          background-image: url('../../images/small-resume-s.png')
+        }
+        @media screen and (min-width: $fullWidth) {
+          // properties for regular version
+          background-image: url('../../images/social-resume-s.png');
+        }
+      }
+      #social-resume:hover:after {
+        //
+        @media screen and (max-width: $smallWidth) {
+          @include toolTip;
+          content: "Download my Resume";
+        }
       }
     }
   }
@@ -406,6 +546,10 @@ nav {
       #small-social-email:hover {
         background-image: url('../../images/small-email-s.png');
       }
+      #small-social-email:hover:after {
+        @include toolTip;
+        content: "Send me an email";
+      }
 
       #small-social-twitter {
         @include smallSocialButton;
@@ -413,6 +557,10 @@ nav {
       }
       #small-social-twitter:hover {
         background-image: url('../../images/small-twitter-s.png');
+      }
+      #small-social-twitter:hover:after {
+        @include toolTip;
+        content: "Follow me on Twitter";
       }
 
       #small-social-github {
@@ -422,6 +570,10 @@ nav {
       #small-social-github:hover {
         background-image: url('../../images/small-github-s.png');
       }
+      #small-social-github:hover:after {
+        @include toolTip;
+        content: "Visit me on GitHub";
+      }
 
       #small-social-linkedin {
         @include smallSocialButton;
@@ -429,6 +581,10 @@ nav {
       }
       #small-social-linkedin:hover {
         background-image: url('../../images/small-linkedin-s.png');
+      }
+      #small-social-linkedin:hover:after {
+        @include toolTip;
+        content: "Add me on LinkedIn";
       }
     }
   }
@@ -501,7 +657,7 @@ nav {
       }
 
       ul {
-        //properties
+        //
 
         li {
           display: inline-block;
@@ -562,8 +718,7 @@ nav {
     padding: 30px 10px 40px 10px;
 
     img {
-      max-width: 590px;
-      height: auto;
+      @include imgAuto;
     }
 
     .post {
@@ -579,7 +734,7 @@ nav {
       }
 
       .morelink {
-        //properties
+        //
 
         a, a:link {
           font-weight: bold;
@@ -648,6 +803,10 @@ nav {
         padding: 40px 0px 0px 0px;
       }
 
+      img {
+        @include imgAuto;
+      }
+
       .tool {
         padding-bottom: 3px;
       }
@@ -661,7 +820,7 @@ nav {
       }
 
       .gallery {
-        //properties
+        //
 
         dl.gallery-item {
           margin: 0;
@@ -669,7 +828,7 @@ nav {
       }
 
       a, a:link {
-        //properties
+        //
 
         img {
           border-style: solid;
