@@ -168,7 +168,7 @@ nav {
 #content {
   margin-left: auto;
   margin-right: auto;
-  max-width: 640px; }
+  max-width: 650px; }
   #content #about {
     position: relative;
     min-height: 164px;
@@ -195,13 +195,13 @@ nav {
   #content #social-container {
     position: relative;
     text-align: center; }
-    @media screen and (max-width: 639px) {
+    @media screen and (max-width: 649px) {
   #content #social-container {
     height: 40px;
     min-width: 200px;
     background-color: #30b069;
     padding-top: 10px; } }
-    @media screen and (min-width: 640px) {
+    @media screen and (min-width: 650px) {
   #content #social-container {
     height: 200px;
     background-color: #30b069;
@@ -211,7 +211,7 @@ nav {
     #content #social-container #social {
       position: relative;
       display: inline-block; }
-      @media screen and (max-width: 639px) {
+      @media screen and (max-width: 649px) {
     #content #social-container #social #social-email {
       width: 32px;
       height: 32px;
@@ -220,7 +220,7 @@ nav {
       background-size: 32px 32px;
       padding-right: 6px;
       background-image: url('../../images/small-email-n.png'); } }
-        @media screen and (min-width: 640px) {
+        @media screen and (min-width: 650px) {
   #content #social-container #social #social-email {
     width: 114px;
     height: 200px;
@@ -230,13 +230,13 @@ nav {
     padding-left: 6px;
     padding-right: 6px;
     background-image: url('../../images/social-email-n.png'); } }
-      @media screen and (max-width: 639px) {
+      @media screen and (max-width: 649px) {
     #content #social-container #social #social-email:hover {
       background-image: url('../../images/small-email-s.png'); } }
-        @media screen and (min-width: 640px) {
+        @media screen and (min-width: 650px) {
   #content #social-container #social #social-email:hover {
     background-image: url('../../images/social-email-s.png'); } }
-      @media screen and (max-width: 639px) {
+      @media screen and (max-width: 649px) {
     #content #social-container #social #social-email:hover:after {
       position: absolute;
       width: 220px;
@@ -249,7 +249,7 @@ nav {
       color: #353b38;
       font-weight: bold;
       content: "Send me an Email"; } }
-      @media screen and (max-width: 639px) {
+      @media screen and (max-width: 649px) {
     #content #social-container #social #social-github {
       width: 32px;
       height: 32px;
@@ -258,7 +258,7 @@ nav {
       background-size: 32px 32px;
       padding-right: 6px;
       background-image: url('../../images/small-github-n.png'); } }
-        @media screen and (min-width: 640px) {
+        @media screen and (min-width: 650px) {
   #content #social-container #social #social-github {
     width: 114px;
     height: 200px;
@@ -268,13 +268,13 @@ nav {
     padding-left: 6px;
     padding-right: 6px;
     background-image: url('../../images/social-github-n.png'); } }
-      @media screen and (max-width: 639px) {
+      @media screen and (max-width: 649px) {
     #content #social-container #social #social-github:hover {
       background-image: url('../../images/small-github-s.png'); } }
-        @media screen and (min-width: 640px) {
+        @media screen and (min-width: 650px) {
   #content #social-container #social #social-github:hover {
     background-image: url('../../images/social-github-s.png'); } }
-      @media screen and (max-width: 639px) {
+      @media screen and (max-width: 649px) {
     #content #social-container #social #social-github:hover:after {
       position: absolute;
       width: 220px;
@@ -287,7 +287,7 @@ nav {
       color: #353b38;
       font-weight: bold;
       content: "Visit me on GitHub"; } }
-      @media screen and (max-width: 639px) {
+      @media screen and (max-width: 649px) {
     #content #social-container #social #social-twitter {
       width: 32px;
       height: 32px;
@@ -296,7 +296,7 @@ nav {
       background-size: 32px 32px;
       padding-right: 6px;
       background-image: url('../../images/small-twitter-n.png'); } }
-        @media screen and (min-width: 640px) {
+        @media screen and (min-width: 650px) {
   #content #social-container #social #social-twitter {
     width: 114px;
     height: 200px;
@@ -306,13 +306,13 @@ nav {
     padding-left: 6px;
     padding-right: 6px;
     background-image: url('../../images/social-twitter-n.png'); } }
-      @media screen and (max-width: 639px) {
+      @media screen and (max-width: 649px) {
     #content #social-container #social #social-twitter:hover {
       background-image: url('../../images/small-twitter-s.png'); } }
-        @media screen and (min-width: 640px) {
+        @media screen and (min-width: 650px) {
   #content #social-container #social #social-twitter:hover {
     background-image: url('../../images/social-twitter-s.png'); } }
-      @media screen and (max-width: 639px) {
+      @media screen and (max-width: 649px) {
     #content #social-container #social #social-twitter:hover:after {
       position: absolute;
       width: 220px;
@@ -325,7 +325,7 @@ nav {
       color: #353b38;
       font-weight: bold;
       content: "Follow me on Twitter"; } }
-      @media screen and (max-width: 639px) {
+      @media screen and (max-width: 649px) {
     #content #social-container #social #social-linkedin {
       width: 32px;
       height: 32px;
@@ -334,7 +334,7 @@ nav {
       background-size: 32px 32px;
       padding-right: 6px;
       background-image: url('../../images/small-linkedin-n.png'); } }
-        @media screen and (min-width: 640px) {
+        @media screen and (min-width: 650px) {
   #content #social-container #social #social-linkedin {
     width: 114px;
     height: 200px;
@@ -344,13 +344,13 @@ nav {
     padding-left: 6px;
     padding-right: 6px;
     background-image: url('../../images/social-linkedin-n.png'); } }
-      @media screen and (max-width: 639px) {
+      @media screen and (max-width: 649px) {
     #content #social-container #social #social-linkedin:hover {
       background-image: url('../../images/small-linkedin-s.png'); } }
-        @media screen and (min-width: 640px) {
+        @media screen and (min-width: 650px) {
   #content #social-container #social #social-linkedin:hover {
     background-image: url('../../images/social-linkedin-s.png'); } }
-      @media screen and (max-width: 639px) {
+      @media screen and (max-width: 649px) {
     #content #social-container #social #social-linkedin:hover:after {
       position: absolute;
       width: 220px;
@@ -363,7 +363,7 @@ nav {
       color: #353b38;
       font-weight: bold;
       content: "Add me on LinkedIn"; } }
-      @media screen and (max-width: 639px) {
+      @media screen and (max-width: 649px) {
     #content #social-container #social #social-resume {
       width: 32px;
       height: 32px;
@@ -372,7 +372,7 @@ nav {
       background-size: 32px 32px;
       padding-right: 6px;
       background-image: url('../../images/small-resume-n.png'); } }
-        @media screen and (min-width: 640px) {
+        @media screen and (min-width: 650px) {
   #content #social-container #social #social-resume {
     width: 114px;
     height: 200px;
@@ -382,13 +382,13 @@ nav {
     padding-left: 6px;
     padding-right: 6px;
     background-image: url('../../images/social-resume-n.png'); } }
-      @media screen and (max-width: 639px) {
+      @media screen and (max-width: 649px) {
     #content #social-container #social #social-resume:hover {
       background-image: url('../../images/small-resume-s.png'); } }
-        @media screen and (min-width: 640px) {
+        @media screen and (min-width: 650px) {
   #content #social-container #social #social-resume:hover {
     background-image: url('../../images/social-resume-s.png'); } }
-      @media screen and (max-width: 639px) {
+      @media screen and (max-width: 649px) {
     #content #social-container #social #social-resume:hover:after {
       position: absolute;
       width: 220px;
@@ -543,20 +543,20 @@ nav {
     background-color: #353b38;
     color: #e5e5e5;
     padding: 0px 10px 0px 10px; }
-    @media screen and (max-width: 639px) {
+    @media screen and (max-width: 649px) {
   #content #blog-controls {
     text-align: center; } }
-    @media screen and (min-width: 640px) {
+    @media screen and (min-width: 650px) {
   #content #blog-controls {
     text-align: left; } }
     #content #blog-controls a, #content #blog-controls a:link {
       color: #e5e5e5; }
     #content #blog-controls a:hover, #content #blog-controls a:active {
       color: #4edf8e; }
-    @media screen and (max-width: 639px) {
+    @media screen and (max-width: 649px) {
     #content #blog-controls .links {
       display: none; } }
-      @media screen and (min-width: 640px) {
+      @media screen and (min-width: 650px) {
   #content #blog-controls .links {
     padding-top: 13px; } }
       #content #blog-controls .links span.nolink {
@@ -574,12 +574,12 @@ nav {
       list-style-type: none;
       min-width: 230px;
       padding-top: 11px; }
-      @media screen and (max-width: 639px) {
+      @media screen and (max-width: 649px) {
   #content #blog-controls li.widget_search {
     margin-left: auto;
     margin-right: auto;
     position: relative; } }
-      @media screen and (min-width: 640px) {
+      @media screen and (min-width: 650px) {
   #content #blog-controls li.widget_search {
     position: absolute;
     right: 10px;
