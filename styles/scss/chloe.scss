@@ -930,6 +930,11 @@ nav {
           border-color: $chloeGreen;
         }
       }
+
+      blockquote {
+        padding: 20px;
+        color: $chloeGreyLight;
+      }
     }
     li.widget:nth-child(odd) {
       background-color: $chloeGrey;
