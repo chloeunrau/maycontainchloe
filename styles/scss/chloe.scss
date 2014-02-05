@@ -239,6 +239,7 @@ body {
 }
 
 header {
+  position: relative;
   height: $headerHeight;
   background-color: $chloeGold;
   background-image: url('../../images/header-tile.png');
@@ -247,9 +248,14 @@ header {
   text-align: center;
 
   img {
-    border: 0;
-    padding: 0;
-    margin: 0;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 100%;
+    height: auto;
   }
 }
 
@@ -263,6 +269,7 @@ nav {
 
   #menu {
     display: inline-block;
+    min-width: 250px;
 
     #menu-home {
       @include menuButton;
@@ -343,6 +350,7 @@ nav {
     @media screen and (max-width: $smallWidth) {
       // properties for mobile version
       height: 40px;
+      min-width: 200px;
       background-color: $chloeGreen;
       padding-top: 10px;
     }
@@ -639,7 +647,16 @@ nav {
     height: $menuHeight;
     background-color: $chloeGrey;
     color: $chloeLight;
-    padding: 15px, 10px, 15px, 10px;
+    padding: 0px 10px 0px 10px;
+
+      @media screen and (max-width: $smallWidth) {
+        // properties for mobile version
+        text-align: center;
+      }
+      @media screen and (min-width: $fullWidth) {
+        // properties for regular version
+        text-align: left;
+      }
 
     a, a:link {
       color: $chloeLight;
@@ -649,7 +666,22 @@ nav {
     }
 
     .links {
-      padding-top: 13px;
+      //
+      @media screen and (max-width: $smallWidth) {
+        // properties for mobile version
+        display: none;
+      }
+      @media screen and (min-width: $fullWidth) {
+        // properties for regular version
+        padding-top: 13px;
+      }
+
+      span.nolink {
+        color: $chloeDark;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: default;
+      }
 
       a, a:link {
         font-size: 16px;
@@ -667,11 +699,21 @@ nav {
     }
 
     li.widget_search {
-      position: absolute;
-      top: 0px;
-      right: 0;
-      margin-top: 11px;
       list-style-type: none;
+      min-width: 230px;
+      padding-top: 11px;
+
+      @media screen and (max-width: $smallWidth) {
+        // properties for mobile version
+        @include centre;
+        position: relative;
+      }
+      @media screen and (min-width: $fullWidth) {
+        // properties for regular version
+        position: absolute;
+        right: 10px;
+        top: 0px;
+      }
 
       h2.widgettitle {
         display: none;
@@ -719,6 +761,29 @@ nav {
 
     img {
       @include imgAuto;
+    }
+
+    a, a:link {
+      //
+
+      img {
+        border-style: solid;
+        border-width: 1px;
+        border-color: $chloeWhite;
+      }
+      img:hover {
+        border-color: $chloeGreen;
+      }
+    }
+
+    ul {
+      padding-left: 40px;
+      padding-bottom: 20px;
+    }
+
+    blockquote {
+      color: $chloeGreyLight;
+      padding: 15px 0px 15px 0px;
     }
 
     .post {

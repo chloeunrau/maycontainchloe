@@ -8,7 +8,7 @@
   <div id="blog-controls">
     <div class="links">
       <ul>
-        <li><!-- Space for links --></li>
+        <li><span class="nolink">&laquo; Back to blog</span></li>
       </ul>
     </div>
     <?php dynamic_sidebar( 'Blog Controls' ); ?>

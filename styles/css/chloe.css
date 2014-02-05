@@ -1,10 +1,4 @@
 /* SASS */
-/* TO DO:
-
-- Media queries for mobile layout
-- Styles for lists and galleries in blog posts
-
-*/
 /* IMPORT */
 @import url(http://fonts.googleapis.com/css
             ?family=Abel);
@@ -108,6 +102,7 @@ body {
   overflow-x: hidden; }
 
 header {
+  position: relative;
   height: 72px;
   background-color: #e7b223;
   background-image: url('../../images/header-tile.png');
@@ -115,9 +110,14 @@ header {
   background-repeat: repeat-x;
   text-align: center; }
   header img {
-    border: 0;
-    padding: 0;
-    margin: 0; }
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 100%;
+    height: auto; }
 
 nav {
   height: 49px;
@@ -127,7 +127,8 @@ nav {
   background-repeat: repeat-x;
   text-align: center; }
   nav #menu {
-    display: inline-block; }
+    display: inline-block;
+    min-width: 250px; }
     nav #menu #menu-home {
       background-repeat: no-repeat;
       float: left;
@@ -198,6 +199,7 @@ nav {
     @media screen and (max-width: 639px) {
   #content #social-container {
     height: 40px;
+    min-width: 200px;
     background-color: #30b069;
     padding-top: 10px; } }
     @media screen and (min-width: 640px) {
@@ -545,13 +547,28 @@ nav {
     height: 49px;
     background-color: #353b38;
     color: #e5e5e5;
-    padding: 15px, 10px, 15px, 10px; }
+    padding: 0px 10px 0px 10px; }
+    @media screen and (max-width: 639px) {
+  #content #blog-controls {
+    text-align: center; } }
+    @media screen and (min-width: 640px) {
+  #content #blog-controls {
+    text-align: left; } }
     #content #blog-controls a, #content #blog-controls a:link {
       color: #e5e5e5; }
     #content #blog-controls a:hover, #content #blog-controls a:active {
       color: #4edf8e; }
+    @media screen and (max-width: 639px) {
     #content #blog-controls .links {
-      padding-top: 13px; }
+      display: none; } }
+      @media screen and (min-width: 640px) {
+  #content #blog-controls .links {
+    padding-top: 13px; } }
+      #content #blog-controls .links span.nolink {
+        color: #282b2a;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: default; }
       #content #blog-controls .links a, #content #blog-controls .links a:link {
         font-size: 16px;
         font-weight: bold; }
@@ -559,11 +576,19 @@ nav {
         display: inline-block;
         padding-right: 20px; }
     #content #blog-controls li.widget_search {
-      position: absolute;
-      top: 0px;
-      right: 0;
-      margin-top: 11px;
-      list-style-type: none; }
+      list-style-type: none;
+      min-width: 230px;
+      padding-top: 11px; }
+      @media screen and (max-width: 639px) {
+  #content #blog-controls li.widget_search {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative; } }
+      @media screen and (min-width: 640px) {
+  #content #blog-controls li.widget_search {
+    position: absolute;
+    right: 10px;
+    top: 0px; } }
       #content #blog-controls li.widget_search h2.widgettitle {
         display: none; }
       #content #blog-controls li.widget_search label {
@@ -600,6 +625,18 @@ nav {
     #content #blog img {
       max-width: 100%;
       height: auto; }
+    #content #blog a img, #content #blog a:link img {
+      border-style: solid;
+      border-width: 1px;
+      border-color: #fff; }
+      #content #blog a img:hover, #content #blog a:link img:hover {
+        border-color: #30b069; }
+    #content #blog ul {
+      padding-left: 40px;
+      padding-bottom: 20px; }
+    #content #blog blockquote {
+      color: #a9abaa;
+      padding: 15px 0px 15px 0px; }
     #content #blog .post {
       padding-left: 15px;
       padding-right: 15px; }
