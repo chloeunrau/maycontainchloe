@@ -418,7 +418,8 @@ nav {
   #content #small-social-container {
     height: 32px; }
     #content #small-social-container #small-social {
-      display: inline-block; }
+      display: inline-block;
+      padding-bottom: 30px; }
       #content #small-social-container #small-social #small-social-email {
         width: 32px;
         height: 32px;

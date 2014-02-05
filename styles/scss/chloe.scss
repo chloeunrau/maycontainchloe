@@ -560,6 +560,7 @@ nav {
 
     #small-social {
       display: inline-block;
+      padding-bottom: 30px;
 
       #small-social-email {
         @include smallSocialButton;
