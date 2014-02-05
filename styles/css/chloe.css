@@ -64,7 +64,6 @@ p {
   padding-bottom: 15px; }
 
 .tooltip {
-  position: relative;
   display: inline; }
 
 * {
@@ -210,6 +209,7 @@ nav {
     background-size: 5px 200px;
     background-repeat: repeat-x; } }
     #content #social-container #social {
+      position: relative;
       display: inline-block; }
       @media screen and (max-width: 639px) {
     #content #social-container #social #social-email {
@@ -238,17 +238,16 @@ nav {
     background-image: url('../../images/social-email-s.png'); } }
       @media screen and (max-width: 639px) {
     #content #social-container #social #social-email:hover:after {
-      background-color: #30b069;
+      position: absolute;
+      width: 220px;
+      bottom: 35px;
+      left: 5px;
+      padding: 5px 15px;
+      z-index: 98;
       border-radius: 5px;
-      bottom: 5px;
+      background-color: #30b069;
       color: #353b38;
       font-weight: bold;
-      left: 20%;
-      padding: 5px 15px;
-      position: absolute;
-      z-index: 98;
-      width: 220px;
-      /* STYLES */
       content: "Send me an Email"; } }
       @media screen and (max-width: 639px) {
     #content #social-container #social #social-github {
@@ -277,17 +276,16 @@ nav {
     background-image: url('../../images/social-github-s.png'); } }
       @media screen and (max-width: 639px) {
     #content #social-container #social #social-github:hover:after {
-      background-color: #30b069;
+      position: absolute;
+      width: 220px;
+      bottom: 35px;
+      left: 5px;
+      padding: 5px 15px;
+      z-index: 98;
       border-radius: 5px;
-      bottom: 5px;
+      background-color: #30b069;
       color: #353b38;
       font-weight: bold;
-      left: 20%;
-      padding: 5px 15px;
-      position: absolute;
-      z-index: 98;
-      width: 220px;
-      /* STYLES */
       content: "Visit me on GitHub"; } }
       @media screen and (max-width: 639px) {
     #content #social-container #social #social-twitter {
@@ -316,17 +314,16 @@ nav {
     background-image: url('../../images/social-twitter-s.png'); } }
       @media screen and (max-width: 639px) {
     #content #social-container #social #social-twitter:hover:after {
-      background-color: #30b069;
+      position: absolute;
+      width: 220px;
+      bottom: 35px;
+      left: 5px;
+      padding: 5px 15px;
+      z-index: 98;
       border-radius: 5px;
-      bottom: 5px;
+      background-color: #30b069;
       color: #353b38;
       font-weight: bold;
-      left: 20%;
-      padding: 5px 15px;
-      position: absolute;
-      z-index: 98;
-      width: 220px;
-      /* STYLES */
       content: "Follow me on Twitter"; } }
       @media screen and (max-width: 639px) {
     #content #social-container #social #social-linkedin {
@@ -355,17 +352,16 @@ nav {
     background-image: url('../../images/social-linkedin-s.png'); } }
       @media screen and (max-width: 639px) {
     #content #social-container #social #social-linkedin:hover:after {
-      background-color: #30b069;
+      position: absolute;
+      width: 220px;
+      bottom: 35px;
+      left: 5px;
+      padding: 5px 15px;
+      z-index: 98;
       border-radius: 5px;
-      bottom: 5px;
+      background-color: #30b069;
       color: #353b38;
       font-weight: bold;
-      left: 20%;
-      padding: 5px 15px;
-      position: absolute;
-      z-index: 98;
-      width: 220px;
-      /* STYLES */
       content: "Add me on LinkedIn"; } }
       @media screen and (max-width: 639px) {
     #content #social-container #social #social-resume {
@@ -394,17 +390,16 @@ nav {
     background-image: url('../../images/social-resume-s.png'); } }
       @media screen and (max-width: 639px) {
     #content #social-container #social #social-resume:hover:after {
-      background-color: #30b069;
+      position: absolute;
+      width: 220px;
+      bottom: 35px;
+      left: 5px;
+      padding: 5px 15px;
+      z-index: 98;
       border-radius: 5px;
-      bottom: 5px;
+      background-color: #30b069;
       color: #353b38;
       font-weight: bold;
-      left: 20%;
-      padding: 5px 15px;
-      position: absolute;
-      z-index: 98;
-      width: 220px;
-      /* STYLES */
       content: "Download my Resume"; } }
   #content #social-container:before, #content #social-container:after {
     content: "";
@@ -435,16 +430,16 @@ nav {
       #content #small-social-container #small-social #small-social-email:hover {
         background-image: url('../../images/small-email-s.png'); }
       #content #small-social-container #small-social #small-social-email:hover:after {
-        background-color: #30b069;
-        border-radius: 5px;
+        position: absolute;
+        width: 220px;
         bottom: 5px;
+        left: 5px;
+        padding: 5px 15px;
+        z-index: 98;
+        border-radius: 5px;
+        background-color: #30b069;
         color: #353b38;
         font-weight: bold;
-        left: 20%;
-        padding: 5px 15px;
-        position: absolute;
-        z-index: 98;
-        width: 220px;
         /* STYLES */
         content: "Send me an email"; }
       #content #small-social-container #small-social #small-social-twitter {
@@ -458,16 +453,16 @@ nav {
       #content #small-social-container #small-social #small-social-twitter:hover {
         background-image: url('../../images/small-twitter-s.png'); }
       #content #small-social-container #small-social #small-social-twitter:hover:after {
-        background-color: #30b069;
-        border-radius: 5px;
+        position: absolute;
+        width: 220px;
         bottom: 5px;
+        left: 5px;
+        padding: 5px 15px;
+        z-index: 98;
+        border-radius: 5px;
+        background-color: #30b069;
         color: #353b38;
         font-weight: bold;
-        left: 20%;
-        padding: 5px 15px;
-        position: absolute;
-        z-index: 98;
-        width: 220px;
         /* STYLES */
         content: "Follow me on Twitter"; }
       #content #small-social-container #small-social #small-social-github {
@@ -481,16 +476,16 @@ nav {
       #content #small-social-container #small-social #small-social-github:hover {
         background-image: url('../../images/small-github-s.png'); }
       #content #small-social-container #small-social #small-social-github:hover:after {
-        background-color: #30b069;
-        border-radius: 5px;
+        position: absolute;
+        width: 220px;
         bottom: 5px;
+        left: 5px;
+        padding: 5px 15px;
+        z-index: 98;
+        border-radius: 5px;
+        background-color: #30b069;
         color: #353b38;
         font-weight: bold;
-        left: 20%;
-        padding: 5px 15px;
-        position: absolute;
-        z-index: 98;
-        width: 220px;
         /* STYLES */
         content: "Visit me on GitHub"; }
       #content #small-social-container #small-social #small-social-linkedin {
@@ -504,16 +499,16 @@ nav {
       #content #small-social-container #small-social #small-social-linkedin:hover {
         background-image: url('../../images/small-linkedin-s.png'); }
       #content #small-social-container #small-social #small-social-linkedin:hover:after {
-        background-color: #30b069;
-        border-radius: 5px;
+        position: absolute;
+        width: 220px;
         bottom: 5px;
+        left: 5px;
+        padding: 5px 15px;
+        z-index: 98;
+        border-radius: 5px;
+        background-color: #30b069;
         color: #353b38;
         font-weight: bold;
-        left: 20%;
-        padding: 5px 15px;
-        position: absolute;
-        z-index: 98;
-        width: 220px;
         /* STYLES */
         content: "Add me on LinkedIn"; }
   #content #activities {
