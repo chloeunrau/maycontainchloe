@@ -974,5 +974,7 @@ footer {
 }
 
 #image-loader {
-  display: none;
+  // Hide the containing images, but ensure they are still loaded
+  position: absolute;
+  margin-left: -9999px;
 }
