@@ -230,6 +230,7 @@ body {
   background-color: $chloeLight;
   margin: 0;
   padding: 0;
+  z-index: 1;
 }
 
 .error {
@@ -976,9 +977,10 @@ footer {
 #image-loader {
   // Hide the containing images, but ensure they are still loaded
   position: absolute;
+  margin-left: -9999px;
   z-index: -9999;
   img {
-    height: 0px;
-    width: 0px;
+    width: 2px;
+    height: 2px;
   }
 }
