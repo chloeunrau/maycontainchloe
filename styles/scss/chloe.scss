@@ -13,6 +13,7 @@
 
 /* VARIABLES */
 
+$chloeTransparent: rgba(0,0,0,0);
 $chloeWhite: #ffffff;
 $chloeBlack: #000000;
 $chloeLight: #e5e5e5;
@@ -812,7 +813,7 @@ nav {
         img {
           border-style: solid;
           border-width: 1px;
-          border-color: $chloeWhite;
+          border-color: $chloeTransparent;
         }
         img:hover {
           border-color: $chloeGreen;
@@ -924,7 +925,7 @@ nav {
         img {
           border-style: solid;
           border-width: 1px;
-          border-color: $chloeDark;
+          border-color: $chloeTransparent;
         }
         img:hover {
           border-color: $chloeGreen;
