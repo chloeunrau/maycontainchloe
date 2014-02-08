@@ -121,31 +121,6 @@ $tileFooterSize: 5px 45px;
   height: auto;
 }
 
-@mixin toolTipHeader {
-  position: absolute;
-  width: 220px;
-  bottom: 35px;
-  left: 5px;
-  padding: 5px 15px;
-  z-index: 98;
-  border-radius: 5px;
-  background-color: $chloeGreen;
-  color: $chloeGrey;
-  font-weight: bold;
-}
-
-@mixin toolTipFooter {
-  position: absolute;
-  width: 220px;
-  bottom: 5px;
-  left: 5px;
-  padding: 5px 15px;
-  z-index: 98;
-  border-radius: 5px;
-  background-color: $chloeGreen;
-  color: $chloeGrey;
-  font-weight: bold;
-}
 
 
 
@@ -208,11 +183,6 @@ h2 {
 
 p {
   padding-bottom: 15px;
-}
-
-.tooltip {
-  //position: relative;
-  display: inline;
 }
 
 * {
@@ -406,13 +376,6 @@ nav {
           background-image: url('../../images/social-email-s.png');
         }
       }
-      #social-email:hover:after {
-        //
-        @media screen and (max-width: $smallWidth) {
-          @include toolTipHeader;
-          content: "Send me an Email";
-        }
-      }
 
       #social-github {
         //
@@ -436,13 +399,6 @@ nav {
         @media screen and (min-width: $fullWidth) {
           // properties for regular version
           background-image: url('../../images/social-github-s.png');
-        }
-      }
-      #social-github:hover:after {
-        //
-        @media screen and (max-width: $smallWidth) {
-          @include toolTipHeader;
-          content: "Visit me on GitHub";
         }
       }
 
@@ -470,13 +426,6 @@ nav {
           background-image: url('../../images/social-twitter-s.png');
         }
       }
-      #social-twitter:hover:after {
-        //
-        @media screen and (max-width: $smallWidth) {
-          @include toolTipHeader;
-          content: "Follow me on Twitter";
-        }
-      }
 
       #social-linkedin {
         //
@@ -502,13 +451,6 @@ nav {
           background-image: url('../../images/social-linkedin-s.png');
         }
       }
-      #social-linkedin:hover:after {
-        //
-        @media screen and (max-width: $smallWidth) {
-          @include toolTipHeader;
-          content: "Add me on LinkedIn";
-        }
-      }
 
       #social-resume {
         //
@@ -532,13 +474,6 @@ nav {
         @media screen and (min-width: $fullWidth) {
           // properties for regular version
           background-image: url('../../images/social-resume-s.png');
-        }
-      }
-      #social-resume:hover:after {
-        //
-        @media screen and (max-width: $smallWidth) {
-          @include toolTipHeader;
-          content: "Download my Resume";
         }
       }
     }
@@ -571,10 +506,6 @@ nav {
       #small-social-email:hover {
         background-image: url('../../images/small-email-s.png');
       }
-      #small-social-email:hover:after {
-        @include toolTipFooter;
-        content: "Send me an email";
-      }
 
       #small-social-twitter {
         @include smallSocialButton;
@@ -582,10 +513,6 @@ nav {
       }
       #small-social-twitter:hover {
         background-image: url('../../images/small-twitter-s.png');
-      }
-      #small-social-twitter:hover:after {
-        @include toolTipFooter;
-        content: "Follow me on Twitter";
       }
 
       #small-social-github {
@@ -595,10 +522,6 @@ nav {
       #small-social-github:hover {
         background-image: url('../../images/small-github-s.png');
       }
-      #small-social-github:hover:after {
-        @include toolTipFooter;
-        content: "Visit me on GitHub";
-      }
 
       #small-social-linkedin {
         @include smallSocialButton;
@@ -606,10 +529,6 @@ nav {
       }
       #small-social-linkedin:hover {
         background-image: url('../../images/small-linkedin-s.png');
-      }
-      #small-social-linkedin:hover:after {
-        @include toolTipFooter;
-        content: "Add me on LinkedIn";
       }
     }
   }
