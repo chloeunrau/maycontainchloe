@@ -23,19 +23,19 @@ Template Name: Home
 
   <div id="social-container">
     <div id="social">
-      <a href="https://twitter.com/chloeunrau">
+      <a href="https://twitter.com/chloeunrau" title="Follow me on Twitter">
         <div id="social-twitter"></div>
       </a>
-      <a href="https://github.com/chloeunrau">
+      <a href="https://github.com/chloeunrau" title="Visit me on GitHub">
         <div id="social-github"></div>
       </a>
-      <a href="http://linkedin.com/in/chloeunrau">
+      <a href="http://linkedin.com/in/chloeunrau" title="Add me on LinkedIn">
         <div id="social-linkedin"></div>
       </a>
-      <a href="mailto:chloe.unrau@gmail.com">
+      <a href="mailto:chloe.unrau@gmail.com" title="Send me an Email">
         <div id="social-email"></div>
       </a>
-      <a href="<?php echo bloginfo('home'); ?>/resume-chloe-unrau.pdf">
+      <a href="<?php echo bloginfo('home'); ?>/resume-chloe-unrau.pdf" title="Download my Resume">
         <div id="social-resume"></div>
       </a>
     </div>
