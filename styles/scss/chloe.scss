@@ -566,6 +566,20 @@ nav {
         margin-top: 5px;
       }
 
+      a {
+        //
+
+        img {
+          border-style: solid;
+          border-width: 1px;
+          border-color: $chloeLight;
+        }
+
+        img:hover {
+          border-color: $chloeGreen;
+        }
+      }
+
       h1 {
         font-size: 18px;
         color: $chloeGrey;
