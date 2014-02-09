@@ -99,6 +99,7 @@ $tileFooterSize: 5px 45px;
   font-family: Abel, sans-serif;
   -webkit-font-smoothing: antialiased !important;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+  letter-spacing: 1px;
 }
 
 @mixin fontCopy {
