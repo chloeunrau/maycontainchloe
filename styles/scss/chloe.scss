@@ -65,6 +65,7 @@ $tileFooterSize: 5px 45px;
   float: left;
   padding-left: auto;
   padding-right: auto;
+  background-position: 0px 0px;
 }
 
 @mixin socialButton {
@@ -72,9 +73,10 @@ $tileFooterSize: 5px 45px;
   height: $socialHeight;
   float: left;
   background-repeat: no-repeat;
-  background-size: $socialWidth $socialHeight;
-  padding-left: 6px;
-  padding-right: 6px;
+  background-size: $socialWidth*2 $socialHeight;
+  margin-left: 6px;
+  margin-right: 6px;
+  background-position: 0px 0px;
 }
 
 @mixin smallSocialButton {
@@ -82,8 +84,9 @@ $tileFooterSize: 5px 45px;
   height: $smallSocialSize;
   float: left;
   background-repeat: no-repeat;
-  background-size: $smallSocialSize $smallSocialSize;
-  padding-right: 6px;
+  background-size: $smallSocialSize*2 $smallSocialSize;
+  margin-right: 6px;
+  background-position: 0px 0px;
 }
 
 @mixin fullWidth {
@@ -261,36 +264,36 @@ nav {
       @include menuButton;
       width: 74px;
       height: $menuHeight;
-      background-image: url('../../images/menu-home-n.png');
-      background-size: $menuHomeWidth $menuHeight;
+      background-image: url('../../images/menu-home.png');
+      background-size: $menuHomeWidth*2 $menuHeight;
       background-repeat: no-repeat;
     }
     #menu-home:hover {
-      background-image: url('../../images/menu-home-s.png');
+      background-position: -$menuHomeWidth 0px;
     }
 
     #menu-blog {
       @include menuButton;
       width: 65px;
       height: $menuHeight;
-      background-image: url('../../images/menu-blog-n.png');
-      background-size: $menuBlogWidth $menuHeight;
+      background-image: url('../../images/menu-blog.png');
+      background-size: $menuBlogWidth*2 $menuHeight;
       background-repeat: no-repeat;
     }
     #menu-blog:hover {
-      background-image: url('../../images/menu-blog-s.png');
+      background-position: -$menuBlogWidth 0px;
     }
 
     #menu-portfolio {
       @include menuButton;
       width: 105px;
       height: $menuHeight;
-      background-image: url('../../images/menu-portfolio-n.png');
-      background-size: $menuPortfolioWidth $menuHeight;
+      background-image: url('../../images/menu-portfolio.png');
+      background-size: $menuPortfolioWidth*2 $menuHeight;
       background-repeat: no-repeat;
     }
     #menu-portfolio:hover {
-      background-image: url('../../images/menu-portfolio-s.png');
+      background-position: -$menuPortfolioWidth 0px;
     }
   }
 }
@@ -358,23 +361,23 @@ nav {
         @media screen and (max-width: $smallWidth) {
           // properties for mobile version
           @include smallSocialButton;
-          background-image: url('../../images/small-email-n.png')
+          background-image: url('../../images/small-email.png')
         }
         @media screen and (min-width: $fullWidth) {
           // properties for regular version
           @include socialButton;
-          background-image: url('../../images/social-email-n.png');
+          background-image: url('../../images/social-email.png');
         }
       }
       #social-email:hover {
         //
         @media screen and (max-width: $smallWidth) {
           // properties for mobile version
-          background-image: url('../../images/small-email-s.png')
+          background-position: -$smallSocialSize 0px;
         }
         @media screen and (min-width: $fullWidth) {
           // properties for regular version
-          background-image: url('../../images/social-email-s.png');
+          background-position: -$socialWidth 0px;
         }
       }
 
@@ -383,23 +386,23 @@ nav {
         @media screen and (max-width: $smallWidth) {
           // properties for mobile version
           @include smallSocialButton;
-          background-image: url('../../images/small-github-n.png')
+          background-image: url('../../images/small-github.png')
         }
         @media screen and (min-width: $fullWidth) {
           // properties for regular version
           @include socialButton;
-          background-image: url('../../images/social-github-n.png');
+          background-image: url('../../images/social-github.png');
         }
       }
       #social-github:hover {
         //
         @media screen and (max-width: $smallWidth) {
           // properties for mobile version
-          background-image: url('../../images/small-github-s.png')
+          background-position: -$smallSocialSize 0px;
         }
         @media screen and (min-width: $fullWidth) {
           // properties for regular version
-          background-image: url('../../images/social-github-s.png');
+          background-position: -$socialWidth 0px;
         }
       }
 
@@ -408,23 +411,23 @@ nav {
         @media screen and (max-width: $smallWidth) {
           // properties for mobile version
           @include smallSocialButton;
-          background-image: url('../../images/small-twitter-n.png')
+          background-image: url('../../images/small-twitter.png')
         }
         @media screen and (min-width: $fullWidth) {
           // properties for regular version
           @include socialButton;
-          background-image: url('../../images/social-twitter-n.png');
+          background-image: url('../../images/social-twitter.png');
         }
       }
       #social-twitter:hover {
         //
         @media screen and (max-width: $smallWidth) {
           // properties for mobile version
-          background-image: url('../../images/small-twitter-s.png')
+          background-position: -$smallSocialSize 0px;
         }
         @media screen and (min-width: $fullWidth) {
           // properties for regular version
-          background-image: url('../../images/social-twitter-s.png');
+          background-position: -$socialWidth 0px;
         }
       }
 
@@ -433,23 +436,23 @@ nav {
         @media screen and (max-width: $smallWidth) {
           // properties for mobile version
           @include smallSocialButton;
-          background-image: url('../../images/small-linkedin-n.png')
+          background-image: url('../../images/small-linkedin.png')
         }
         @media screen and (min-width: $fullWidth) {
           // properties for regular version
           @include socialButton;
-          background-image: url('../../images/social-linkedin-n.png');
+          background-image: url('../../images/social-linkedin.png');
         }
       }
       #social-linkedin:hover {
         //
         @media screen and (max-width: $smallWidth) {
           // properties for mobile version
-          background-image: url('../../images/small-linkedin-s.png')
+          background-position: -$smallSocialSize 0px;
         }
         @media screen and (min-width: $fullWidth) {
           // properties for regular version
-          background-image: url('../../images/social-linkedin-s.png');
+          background-position: -$socialWidth 0px;
         }
       }
 
@@ -458,23 +461,23 @@ nav {
         @media screen and (max-width: $smallWidth) {
           // properties for mobile version
           @include smallSocialButton;
-          background-image: url('../../images/small-resume-n.png')
+          background-image: url('../../images/small-resume.png')
         }
         @media screen and (min-width: $fullWidth) {
           // properties for regular version
           @include socialButton;
-          background-image: url('../../images/social-resume-n.png');
+          background-image: url('../../images/social-resume.png');
         }
       }
       #social-resume:hover {
         //
         @media screen and (max-width: $smallWidth) {
           // properties for mobile version
-          background-image: url('../../images/small-resume-s.png')
+          background-position: -$smallSocialSize 0px;
         }
         @media screen and (min-width: $fullWidth) {
           // properties for regular version
-          background-image: url('../../images/social-resume-s.png');
+          background-position: -$socialWidth 0px;
         }
       }
     }
@@ -905,16 +908,5 @@ footer {
   img {
     max-width: 100%;
     height: auto;
-  }
-}
-
-#image-loader {
-  // Hide the containing images, but ensure they are still loaded
-  position: absolute;
-  margin-left: -9999px;
-  z-index: -9999;
-  img {
-    width: 2px;
-    height: 2px;
   }
 }
