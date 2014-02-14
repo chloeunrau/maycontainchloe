@@ -60,7 +60,16 @@ $tileFooterSize: 5px 45px;
   margin-right: auto;
 }
 
+@mixin trans {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition:all 0.3s ease;
+  -o-transition:all 0.3s ease;
+  transition:all 0.3s ease;
+}
+
 @mixin menuButton {
+  position: relative;
+  display: block;
   background-repeat: no-repeat;
   float: left;
   padding-left: auto;
@@ -68,25 +77,83 @@ $tileFooterSize: 5px 45px;
   background-position: 0px 0px;
 }
 
+@mixin menuButtonHome {
+  width: $menuHomeWidth;
+  height: $menuHeight;
+  background-image: url('../../images/menu-home.png');
+  background-size: $menuHomeWidth*2 $menuHeight;
+}
+
+@mixin menuButtonBlog {
+  width: $menuBlogWidth;
+  height: $menuHeight;
+  background-image: url('../../images/menu-blog.png');
+  background-size: $menuBlogWidth*2 $menuHeight;
+}
+
+@mixin menuButtonPortfolio {
+  width: $menuPortfolioWidth;
+  height: $menuHeight;
+  background-image: url('../../images/menu-portfolio.png');
+  background-size: $menuPortfolioWidth*2 $menuHeight;
+}
+
 @mixin socialButton {
+  position: relative;
+  display: block;
   width: $socialWidth;
   height: $socialHeight;
   float: left;
   background-repeat: no-repeat;
   background-size: $socialWidth*2 $socialHeight;
+  background-position: 0px 0px;
   margin-left: 6px;
   margin-right: 6px;
-  background-position: 0px 0px;
+}
+
+@mixin socialButtonHover {
+  position: absolute;
+  display: block;
+  width: $socialWidth;
+  height: $socialHeight;
+  background-repeat: no-repeat;
+  background-size: $socialWidth*2 $socialHeight;
+  background-position: -$socialWidth 0px;
 }
 
 @mixin smallSocialButton {
+  position: relative;
+  display: block;
   width: $smallSocialSize;
   height: $smallSocialSize;
   float: left;
   background-repeat: no-repeat;
   background-size: $smallSocialSize*2 $smallSocialSize;
-  margin-right: 6px;
   background-position: 0px 0px;
+  margin-right: 6px;
+}
+
+@mixin smallSocialButtonHover {
+  position: absolute;
+  display: block;
+  width: $smallSocialSize;
+  height: $smallSocialSize;
+  background-repeat: no-repeat;
+  background-size: $smallSocialSize*2 $smallSocialSize;
+  background-position: -$smallSocialSize 0px;
+}
+
+@mixin buttonTrans {
+  @include trans;
+  position: absolute;
+  display: block;
+  text-indent: -99999px;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+
+@mixin buttonTransHover {
+  opacity: 1;
 }
 
 @mixin fullWidth {
@@ -130,6 +197,10 @@ $tileFooterSize: 5px 45px;
 
 /* STYLES */
 
+img {
+  @include trans;
+}
+
 img.alignright {
   float: right;
   margin: 0 0 1em 1em;
@@ -159,6 +230,7 @@ a img.aligncenter {
 
 a, a:link {
   @include linkNormal;
+  @include trans;
 }
 a:hover, a:active {
   @include linkHover;
@@ -262,38 +334,41 @@ nav {
 
     #menu-home {
       @include menuButton;
-      width: 74px;
-      height: $menuHeight;
-      background-image: url('../../images/menu-home.png');
-      background-size: $menuHomeWidth*2 $menuHeight;
-      background-repeat: no-repeat;
+      @include menuButtonHome;
     }
-    #menu-home:hover {
+    #menu-home span {
+      @include buttonTrans;
+      @include menuButtonHome;
       background-position: -$menuHomeWidth 0px;
+    }
+    #menu-home span:hover {
+      @include buttonTransHover;
     }
 
     #menu-blog {
       @include menuButton;
-      width: 65px;
-      height: $menuHeight;
-      background-image: url('../../images/menu-blog.png');
-      background-size: $menuBlogWidth*2 $menuHeight;
-      background-repeat: no-repeat;
+      @include menuButtonBlog;
     }
-    #menu-blog:hover {
+    #menu-blog span {
+      @include buttonTrans;
+      @include menuButtonBlog;
       background-position: -$menuBlogWidth 0px;
+    }
+    #menu-blog span:hover {
+      @include buttonTransHover;
     }
 
     #menu-portfolio {
       @include menuButton;
-      width: 105px;
-      height: $menuHeight;
-      background-image: url('../../images/menu-portfolio.png');
-      background-size: $menuPortfolioWidth*2 $menuHeight;
-      background-repeat: no-repeat;
+      @include menuButtonPortfolio;
     }
-    #menu-portfolio:hover {
+    #menu-portfolio span {
+      @include buttonTrans;
+      @include menuButtonPortfolio;
       background-position: -$menuPortfolioWidth 0px;
+    }
+    #menu-portfolio span:hover {
+      @include buttonTransHover;
     }
   }
 }
@@ -361,7 +436,7 @@ nav {
         @media screen and (max-width: $smallWidth) {
           // properties for mobile version
           @include smallSocialButton;
-          background-image: url('../../images/small-email.png')
+          background-image: url('../../images/small-email.png');
         }
         @media screen and (min-width: $fullWidth) {
           // properties for regular version
@@ -369,16 +444,21 @@ nav {
           background-image: url('../../images/social-email.png');
         }
       }
-      #social-email:hover {
-        //
+      #social-email span {
+        @include buttonTrans;
         @media screen and (max-width: $smallWidth) {
           // properties for mobile version
-          background-position: -$smallSocialSize 0px;
+          @include smallSocialButtonHover;
+          background-image: url('../../images/small-email.png');
         }
         @media screen and (min-width: $fullWidth) {
           // properties for regular version
-          background-position: -$socialWidth 0px;
+          @include socialButtonHover;
+          background-image: url('../../images/social-email.png');
         }
+      }
+      #social-email span:hover {
+        @include buttonTransHover;
       }
 
       #social-github {
@@ -394,16 +474,21 @@ nav {
           background-image: url('../../images/social-github.png');
         }
       }
-      #social-github:hover {
-        //
+      #social-github span {
+        @include buttonTrans;
         @media screen and (max-width: $smallWidth) {
           // properties for mobile version
-          background-position: -$smallSocialSize 0px;
+          @include smallSocialButtonHover;
+          background-image: url('../../images/small-github.png')
         }
         @media screen and (min-width: $fullWidth) {
           // properties for regular version
-          background-position: -$socialWidth 0px;
+          @include socialButtonHover;
+          background-image: url('../../images/social-github.png');
         }
+      }
+      #social-github span:hover {
+        @include buttonTransHover;
       }
 
       #social-twitter {
@@ -419,16 +504,21 @@ nav {
           background-image: url('../../images/social-twitter.png');
         }
       }
-      #social-twitter:hover {
-        //
+      #social-twitter span {
+        @include buttonTrans;
         @media screen and (max-width: $smallWidth) {
           // properties for mobile version
-          background-position: -$smallSocialSize 0px;
+          @include smallSocialButtonHover;
+          background-image: url('../../images/small-twitter.png')
         }
         @media screen and (min-width: $fullWidth) {
           // properties for regular version
-          background-position: -$socialWidth 0px;
+          @include socialButtonHover;
+          background-image: url('../../images/social-twitter.png');
         }
+      }
+      #social-twitter span:hover {
+        @include buttonTransHover;
       }
 
       #social-linkedin {
@@ -444,16 +534,21 @@ nav {
           background-image: url('../../images/social-linkedin.png');
         }
       }
-      #social-linkedin:hover {
-        //
+      #social-linkedin span {
+        @include buttonTrans;
         @media screen and (max-width: $smallWidth) {
           // properties for mobile version
-          background-position: -$smallSocialSize 0px;
+          @include smallSocialButtonHover;
+          background-image: url('../../images/small-linkedin.png')
         }
         @media screen and (min-width: $fullWidth) {
           // properties for regular version
-          background-position: -$socialWidth 0px;
+          @include socialButtonHover;
+          background-image: url('../../images/social-linkedin.png');
         }
+      }
+      #social-linkedin span:hover {
+        @include buttonTransHover;
       }
 
       #social-resume {
@@ -469,16 +564,21 @@ nav {
           background-image: url('../../images/social-resume.png');
         }
       }
-      #social-resume:hover {
-        //
+      #social-resume span {
+        @include buttonTrans;
         @media screen and (max-width: $smallWidth) {
           // properties for mobile version
-          background-position: -$smallSocialSize 0px;
+          @include smallSocialButtonHover;
+          background-image: url('../../images/small-resume.png')
         }
         @media screen and (min-width: $fullWidth) {
           // properties for regular version
-          background-position: -$socialWidth 0px;
+          @include socialButtonHover;
+          background-image: url('../../images/social-resume.png');
         }
+      }
+      #social-resume span:hover {
+        @include buttonTransHover;
       }
     }
   }

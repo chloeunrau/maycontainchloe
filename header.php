@@ -22,13 +22,13 @@
 <nav>
   <div id="menu">
     <a href="<?php echo bloginfo('home'); ?>">
-      <div id="menu-home"></div>
+      <div id="menu-home"><span></span></div>
     </a>
     <a href="<?php echo bloginfo('home'); ?>/blog">
-      <div id="menu-blog"></div>
+      <div id="menu-blog"><span></span></div>
     </a>
     <a href="<?php echo bloginfo('home'); ?>/portfolio">
-      <div id="menu-portfolio"></div>
+      <div id="menu-portfolio"><span></span></div>
     </a>
   </div>
 </nav>
