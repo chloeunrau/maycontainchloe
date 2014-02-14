@@ -420,7 +420,7 @@ nav {
     }
     @media screen and (min-width: $fullWidth) {
       // properties for regular version
-      height: 200px;
+      height: $socialHeight;
       background-color: $chloeGreen;
       background-image: url('../../images/social-tile.png');
       background-size: $tileSocialSize;
@@ -639,22 +639,6 @@ nav {
 
   #activities {
     padding: 30px 10px 40px 10px;
-
-    // Styles for Recent Posts (3) Widget
-    li#recent-posts-3 {
-      height: 70px;
-      list-style-type: none;
-      margin-top: 20px;
-      margin-left: 90px;
-
-      h2.widgettitle {
-        float: left;
-      }
-      ul {
-        float: left;
-        margin-left: 50px;
-      }
-    }
 
     .title {
       text-align: center;
