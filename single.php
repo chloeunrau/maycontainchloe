@@ -51,16 +51,16 @@
     <div id="small-social-container">
       <div id="small-social">
         <a href="https://twitter.com/chloeunrau" title="Follow me on Twitter">
-          <div id="small-social-twitter"></div>
+          <div id="small-social-twitter"><span></span></div>
         </a>
         <a href="https://github.com/chloeunrau" title="Visit me on GitHub">
-          <div id="small-social-github"></div>
+          <div id="small-social-github"><span></span></div>
         </a>
         <a href="http://linkedin.com/in/chloeunrau" title="Add me on LinkedIn">
-          <div id="small-social-linkedin"></div>
+          <div id="small-social-linkedin"><span></span></div>
         </a>
         <a href="mailto:chloe.unrau@gmail.com" title="Send me an Email">
-          <div id="small-social-email"></div>
+          <div id="small-social-email"><span></span></div>
         </a>
       </div>
     </div>

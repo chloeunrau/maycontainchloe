@@ -335,40 +335,40 @@ nav {
     #menu-home {
       @include menuButton;
       @include menuButtonHome;
-    }
-    #menu-home span {
-      @include buttonTrans;
-      @include menuButtonHome;
-      background-position: -$menuHomeWidth 0px;
-    }
-    #menu-home span:hover {
-      @include buttonTransHover;
+      span {
+        @include buttonTrans;
+        @include menuButtonHome;
+        background-position: -$menuHomeWidth 0px;
+      }
+      span:hover {
+        @include buttonTransHover;
+      }
     }
 
     #menu-blog {
       @include menuButton;
       @include menuButtonBlog;
-    }
-    #menu-blog span {
-      @include buttonTrans;
-      @include menuButtonBlog;
-      background-position: -$menuBlogWidth 0px;
-    }
-    #menu-blog span:hover {
-      @include buttonTransHover;
+      span {
+        @include buttonTrans;
+        @include menuButtonBlog;
+        background-position: -$menuBlogWidth 0px;
+      }
+      span:hover {
+        @include buttonTransHover;
+      }
     }
 
     #menu-portfolio {
       @include menuButton;
       @include menuButtonPortfolio;
-    }
-    #menu-portfolio span {
-      @include buttonTrans;
-      @include menuButtonPortfolio;
-      background-position: -$menuPortfolioWidth 0px;
-    }
-    #menu-portfolio span:hover {
-      @include buttonTransHover;
+      span {
+        @include buttonTrans;
+        @include menuButtonPortfolio;
+        background-position: -$menuPortfolioWidth 0px;
+      }
+      span:hover {
+        @include buttonTransHover;
+      }
     }
   }
 }
@@ -443,22 +443,22 @@ nav {
           @include socialButton;
           background-image: url('../../images/social-email.png');
         }
-      }
-      #social-email span {
-        @include buttonTrans;
-        @media screen and (max-width: $smallWidth) {
-          // properties for mobile version
-          @include smallSocialButtonHover;
-          background-image: url('../../images/small-email.png');
+        span {
+          @include buttonTrans;
+          @media screen and (max-width: $smallWidth) {
+            // properties for mobile version
+            @include smallSocialButtonHover;
+            background-image: inherit;
+          }
+          @media screen and (min-width: $fullWidth) {
+            // properties for regular version
+            @include socialButtonHover;
+            background-image: inherit;
+          }
         }
-        @media screen and (min-width: $fullWidth) {
-          // properties for regular version
-          @include socialButtonHover;
-          background-image: url('../../images/social-email.png');
+        span:hover {
+          @include buttonTransHover;
         }
-      }
-      #social-email span:hover {
-        @include buttonTransHover;
       }
 
       #social-github {
@@ -466,29 +466,29 @@ nav {
         @media screen and (max-width: $smallWidth) {
           // properties for mobile version
           @include smallSocialButton;
-          background-image: url('../../images/small-github.png')
+          background-image: url('../../images/small-github.png');
         }
         @media screen and (min-width: $fullWidth) {
           // properties for regular version
           @include socialButton;
           background-image: url('../../images/social-github.png');
         }
-      }
-      #social-github span {
-        @include buttonTrans;
-        @media screen and (max-width: $smallWidth) {
-          // properties for mobile version
-          @include smallSocialButtonHover;
-          background-image: url('../../images/small-github.png')
+        span {
+          @include buttonTrans;
+          @media screen and (max-width: $smallWidth) {
+            // properties for mobile version
+            @include smallSocialButtonHover;
+            background-image: inherit;
+          }
+          @media screen and (min-width: $fullWidth) {
+            // properties for regular version
+            @include socialButtonHover;
+            background-image: inherit;
+          }
         }
-        @media screen and (min-width: $fullWidth) {
-          // properties for regular version
-          @include socialButtonHover;
-          background-image: url('../../images/social-github.png');
+        span:hover {
+          @include buttonTransHover;
         }
-      }
-      #social-github span:hover {
-        @include buttonTransHover;
       }
 
       #social-twitter {
@@ -496,29 +496,29 @@ nav {
         @media screen and (max-width: $smallWidth) {
           // properties for mobile version
           @include smallSocialButton;
-          background-image: url('../../images/small-twitter.png')
+          background-image: url('../../images/small-twitter.png');
         }
         @media screen and (min-width: $fullWidth) {
           // properties for regular version
           @include socialButton;
           background-image: url('../../images/social-twitter.png');
         }
-      }
-      #social-twitter span {
-        @include buttonTrans;
-        @media screen and (max-width: $smallWidth) {
-          // properties for mobile version
-          @include smallSocialButtonHover;
-          background-image: url('../../images/small-twitter.png')
+        span {
+          @include buttonTrans;
+          @media screen and (max-width: $smallWidth) {
+            // properties for mobile version
+            @include smallSocialButtonHover;
+            background-image: inherit;
+          }
+          @media screen and (min-width: $fullWidth) {
+            // properties for regular version
+            @include socialButtonHover;
+            background-image: inherit;
+          }
         }
-        @media screen and (min-width: $fullWidth) {
-          // properties for regular version
-          @include socialButtonHover;
-          background-image: url('../../images/social-twitter.png');
+        span:hover {
+          @include buttonTransHover;
         }
-      }
-      #social-twitter span:hover {
-        @include buttonTransHover;
       }
 
       #social-linkedin {
@@ -526,29 +526,29 @@ nav {
         @media screen and (max-width: $smallWidth) {
           // properties for mobile version
           @include smallSocialButton;
-          background-image: url('../../images/small-linkedin.png')
+          background-image: url('../../images/small-linkedin.png');
         }
         @media screen and (min-width: $fullWidth) {
           // properties for regular version
           @include socialButton;
           background-image: url('../../images/social-linkedin.png');
         }
-      }
-      #social-linkedin span {
-        @include buttonTrans;
-        @media screen and (max-width: $smallWidth) {
-          // properties for mobile version
-          @include smallSocialButtonHover;
-          background-image: url('../../images/small-linkedin.png')
+        span {
+          @include buttonTrans;
+          @media screen and (max-width: $smallWidth) {
+            // properties for mobile version
+            @include smallSocialButtonHover;
+            background-image: inherit;
+          }
+          @media screen and (min-width: $fullWidth) {
+            // properties for regular version
+            @include socialButtonHover;
+            background-image: inherit;
+          }
         }
-        @media screen and (min-width: $fullWidth) {
-          // properties for regular version
-          @include socialButtonHover;
-          background-image: url('../../images/social-linkedin.png');
+        span:hover {
+          @include buttonTransHover;
         }
-      }
-      #social-linkedin span:hover {
-        @include buttonTransHover;
       }
 
       #social-resume {
@@ -556,29 +556,29 @@ nav {
         @media screen and (max-width: $smallWidth) {
           // properties for mobile version
           @include smallSocialButton;
-          background-image: url('../../images/small-resume.png')
+          background-image: url('../../images/small-resume.png');
         }
         @media screen and (min-width: $fullWidth) {
           // properties for regular version
           @include socialButton;
           background-image: url('../../images/social-resume.png');
         }
-      }
-      #social-resume span {
-        @include buttonTrans;
-        @media screen and (max-width: $smallWidth) {
-          // properties for mobile version
-          @include smallSocialButtonHover;
-          background-image: url('../../images/small-resume.png')
+        span {
+          @include buttonTrans;
+          @media screen and (max-width: $smallWidth) {
+            // properties for mobile version
+            @include smallSocialButtonHover;
+            background-image: inherit;
+          }
+          @media screen and (min-width: $fullWidth) {
+            // properties for regular version
+            @include socialButtonHover;
+            background-image: inherit;
+          }
         }
-        @media screen and (min-width: $fullWidth) {
-          // properties for regular version
-          @include socialButtonHover;
-          background-image: url('../../images/social-resume.png');
+        span:hover {
+          @include buttonTransHover;
         }
-      }
-      #social-resume span:hover {
-        @include buttonTransHover;
       }
     }
   }
@@ -600,39 +600,60 @@ nav {
     height: $smallSocialSize;
 
     #small-social {
+      position: relative;
       display: inline-block;
-      padding-bottom: 30px;
+      margin-bottom: 30px;
 
       #small-social-email {
         @include smallSocialButton;
-        background-image: url('../../images/small-email-n.png');
-      }
-      #small-social-email:hover {
-        background-image: url('../../images/small-email-s.png');
+        background-image: url('../../images/small-email.png');
+        span {
+          @include buttonTrans;
+          @include smallSocialButtonHover;
+          background-image: inherit;
+        }
+        span:hover {
+          @include buttonTransHover;
+        }
       }
 
       #small-social-twitter {
         @include smallSocialButton;
-        background-image: url('../../images/small-twitter-n.png');
-      }
-      #small-social-twitter:hover {
-        background-image: url('../../images/small-twitter-s.png');
+        background-image: url('../../images/small-twitter.png');
+        span {
+          @include buttonTrans;
+          @include smallSocialButtonHover;
+          background-image: inherit;
+        }
+        span:hover {
+          @include buttonTransHover;
+        }
       }
 
       #small-social-github {
         @include smallSocialButton;
-        background-image: url('../../images/small-github-n.png');
-      }
-      #small-social-github:hover {
-        background-image: url('../../images/small-github-s.png');
+        background-image: url('../../images/small-github.png');
+        span {
+          @include buttonTrans;
+          @include smallSocialButtonHover;
+          background-image: inherit;
+        }
+        span:hover {
+          @include buttonTransHover;
+        }
       }
 
       #small-social-linkedin {
         @include smallSocialButton;
-        background-image: url('../../images/small-linkedin-n.png');
-      }
-      #small-social-linkedin:hover {
-        background-image: url('../../images/small-linkedin-s.png');
+        background-image: url('../../images/small-linkedin.png');
+        span {
+          @include buttonTrans;
+          @include smallSocialButtonHover;
+          background-image: inherit;
+        }
+        span:hover {
+          @include buttonTransHover;
+        }
       }
     }
   }
