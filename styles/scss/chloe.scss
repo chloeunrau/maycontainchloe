@@ -28,7 +28,7 @@ $chloeGreenLight: #4edf8e;
 
 $fullWidth: 650px;
 $smallWidth: 649px;
-$headerHeight: 72px;
+$headerHeight: 86px;
 $menuHomeWidth: 74px;
 $menuBlogWidth: 65px;
 $menuPortfolioWidth: 105px;
@@ -39,8 +39,8 @@ $socialHeight: 200px;
 $smallSocialSize: 32px;
 $pictureWidth: 123px;
 $pictureHeight: 164px;
-$tileHeaderSize: 5px 72px;
-$tileMenuSize: 5px 49px;
+$tileHeaderSize: 5px $headerHeight;
+$tileMenuSize: 5px $menuHeight;
 $tileSocialSize: 5px 200px;
 $tileFooterSize: 5px 45px;
 
