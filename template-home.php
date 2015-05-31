@@ -21,22 +21,22 @@ Template Name: Home
     <?php endif; ?>
   </div>
 
-  <div id="social-container">
-    <div id="social">
+  <div id="comm-container">
+    <div id="comm">
       <a href="https://twitter.com/chloeunrau" title="Follow me on Twitter">
-        <div id="social-twitter"><span></span></div>
+        <div id="comm-twitter"><span></span></div>
       </a>
       <a href="https://github.com/chloeunrau" title="Visit me on GitHub">
-        <div id="social-github"><span></span></div>
+        <div id="comm-github"><span></span></div>
       </a>
       <a href="http://linkedin.com/in/chloeunrau" title="Add me on LinkedIn">
-        <div id="social-linkedin"><span></span></div>
+        <div id="comm-linkedin"><span></span></div>
       </a>
       <a href="mailto:chloe.unrau@gmail.com" title="Send me an Email">
-        <div id="social-email"><span></span></div>
+        <div id="comm-email"><span></span></div>
       </a>
       <a href="<?php echo bloginfo('home'); ?>/resume-chloe-unrau.pdf" title="Download my Resume">
-        <div id="social-resume"><span></span></div>
+        <div id="comm-resume"><span></span></div>
       </a>
     </div>
   </div>

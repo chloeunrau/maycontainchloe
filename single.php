@@ -40,27 +40,27 @@
 
   <div id="about">
 
-    <img class="alignleft size-full" 
-         alt="Chloe Unrau" 
+    <img class="alignleft size-full"
+         alt="Chloe Unrau"
          src="<?php echo bloginfo('template_url'); ?>/images/chloe.png" width="123px" height="164px" />
 
     <h1>Chloe Unrau</h1>
 
     <?php dynamic_sidebar( 'Blog Post About Me' ); ?>
 
-    <div id="small-social-container">
-      <div id="small-social">
+    <div id="small-comm-container">
+      <div id="small-comm">
         <a href="https://twitter.com/chloeunrau" title="Follow me on Twitter">
-          <div id="small-social-twitter"><span></span></div>
+          <div id="small-comm-twitter"><span></span></div>
         </a>
         <a href="https://github.com/chloeunrau" title="Visit me on GitHub">
-          <div id="small-social-github"><span></span></div>
+          <div id="small-comm-github"><span></span></div>
         </a>
         <a href="http://linkedin.com/in/chloeunrau" title="Add me on LinkedIn">
-          <div id="small-social-linkedin"><span></span></div>
+          <div id="small-comm-linkedin"><span></span></div>
         </a>
         <a href="mailto:chloe.unrau@gmail.com" title="Send me an Email">
-          <div id="small-social-email"><span></span></div>
+          <div id="small-comm-email"><span></span></div>
         </a>
       </div>
     </div>
