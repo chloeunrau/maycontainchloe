@@ -41,8 +41,8 @@ add_filter('the_content', 'filter_ptags_on_images');
 add_filter( 'the_content_more_link', 'my_more_link', 10, 2 );
 
 function my_more_link( $more_link, $more_link_text ) {
-  return str_replace( $more_link_text, 
-                      '<div class="morelink">Continue reading...</div>', 
+  return str_replace( $more_link_text,
+                      '<div class="morelink">Continue reading...</div>',
                       $more_link );
 }
 

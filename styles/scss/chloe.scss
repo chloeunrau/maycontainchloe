@@ -290,6 +290,9 @@ body {
     color: $chloeDark;
   }
 }
+.clearfix {
+  clear: both;
+}
 
 #wrapper {
   min-height: 100%;
