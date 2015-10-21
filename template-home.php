@@ -32,7 +32,7 @@ Template Name: Home
       <a href="http://linkedin.com/in/chloeunrau" title="Add me on LinkedIn">
         <div id="comm-linkedin"><span></span></div>
       </a>
-      <a href="mailto:chloe.unrau@gmail.com" title="Send me an Email">
+      <a href="mailto:mail@chloeunrau.com" title="Send me an Email">
         <div id="comm-email"><span></span></div>
       </a>
       <a href="<?php echo bloginfo('home'); ?>/resume-chloe-unrau.pdf" title="Download my Resume">
