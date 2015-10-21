@@ -59,7 +59,7 @@
         <a href="http://linkedin.com/in/chloeunrau" title="Add me on LinkedIn">
           <div id="small-comm-linkedin"><span></span></div>
         </a>
-        <a href="mailto:mail@chloeunrau.com" title="Send me an Email">
+        <a href="mailto:<?php echo get_option('admin_email', 'chloe.unrau@gmail.com'); ?>" title="Send me an Email">
           <div id="small-comm-email"><span></span></div>
         </a>
       </div>
